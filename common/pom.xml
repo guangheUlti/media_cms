@@ -17,16 +17,18 @@
     <version>1.0</version>
     <!--子项目-->
     <modules>
-        <module>jeeweb-common-base</module>
-        <module>jeeweb-common-hibernatemvc</module>
-        <module>jeeweb-common-mybatismvc</module>
-        <module>jeeweb-common-query</module>
-        <module>jeeweb-common-security</module>
-        <module>jeeweb-common-utils</module>
-        <module>jeeweb-common-oss</module>
-        <module>jeeweb-common-quartz</module>
-        <module>jeeweb-common-sms</module>
-        <module>jeeweb-common-email</module>
+        <module>common-base</module>
+        <module>common-hibernatemvc</module>
+        <module>common-mybatismvc</module>
+        <module>common-query</module>
+        <module>common-security</module>
+        <module>common-utils</module>
+        <module>common-oss</module>
+        <module>common-quartz</module>
+        <module>common-sms</module>
+        <module>common-email</module>
+        <module>base</module>
+        <module>common-query</module>
     </modules>
     <build>
         <finalName>${project.artifactId}</finalName>
