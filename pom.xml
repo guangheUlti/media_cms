@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--POM version-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--基于Springboot-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <!--项目坐标-->
+    <groupId>io.guangsoft</groupId>
+    <artifactId>media</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <url>https://www.cnblogs.com/guanghe/</url>
+    <developers>
+        <developer>
+            <name>光何</name>
+            <email>18903378092@163.com</email>
+            <url>https://www.cnblogs.com/guanghe/</url>
+        </developer>
+    </developers>
+    <!--子项目-->
+    <modules>
+        <module>common</module>
+        <module>server</module>
+        <module>webapp</module>
+    </modules>
+    <properties>
+        <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <!--spring boot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--热部署动态更新-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- servlet 依赖. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- 编码和编译和JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
