@@ -17,18 +17,11 @@
     <version>1.0</version>
     <!--子项目-->
     <modules>
-        <module>common-base</module>
-        <module>common-hibernatemvc</module>
-        <module>common-mybatismvc</module>
-        <module>common-query</module>
-        <module>common-security</module>
         <module>common-utils</module>
-        <module>common-oss</module>
-        <module>common-quartz</module>
-        <module>common-sms</module>
-        <module>common-email</module>
-        <module>base</module>
         <module>common-query</module>
+        <module>common-base</module>
+        <module>common-security</module>
+        <module>common-crm</module>
     </modules>
     <build>
         <finalName>${project.artifactId}</finalName>

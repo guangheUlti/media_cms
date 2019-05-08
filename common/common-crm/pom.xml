@@ -7,14 +7,30 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>common-query</artifactId>
+    <artifactId>common-crm</artifactId>
     <packaging>jar</packaging>
+    <properties>
+        <!--spring boot 相关-->
+        <mybatis-plus-boot-starter.version>2.1.9</mybatis-plus-boot-starter.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>io.guangsoft</groupId>
-            <artifactId>common-utils</artifactId>
+            <artifactId>common-security</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.guangsoft</groupId>
+            <artifactId>common-query</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- mybatis-plus begin -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <!-- mybatis-plus end -->
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
