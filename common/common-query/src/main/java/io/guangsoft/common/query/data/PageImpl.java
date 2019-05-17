@@ -16,7 +16,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/**
 	 * Constructor of {@code PageImpl}.
-	 * 
 	 * @param content
 	 *            the content of this page, must not be {@literal null}.
 	 * @param pageable
@@ -38,7 +37,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 	/**
 	 * Creates a new {@link PageImpl} with the given content. This will result
 	 * in the created {@link Page} being identical to the entire {@link List}.
-	 * 
 	 * @param content
 	 *            must not be {@literal null}.
 	 */
@@ -48,7 +46,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getNumber()
 	 */
 	public int getNumber() {
@@ -57,7 +54,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getSize()
 	 */
 	public int getSize() {
@@ -66,7 +62,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getTotalPages()
 	 */
 	public int getTotalPages() {
@@ -75,7 +70,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getNumberOfElements()
 	 */
 	public int getNumberOfElements() {
@@ -84,7 +78,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getTotalElements()
 	 */
 	public long getTotalElements() {
@@ -93,7 +86,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#hasPreviousPage()
 	 */
 	public boolean hasPreviousPage() {
@@ -102,7 +94,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#isFirstPage()
 	 */
 	public boolean isFirstPage() {
@@ -111,7 +102,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#hasNextPage()
 	 */
 	public boolean hasNextPage() {
@@ -120,7 +110,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#isLastPage()
 	 */
 	public boolean isLastPage() {
@@ -129,7 +118,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#nextPageable()
 	 */
 	public Pageable nextPageable() {
@@ -138,7 +126,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#previousOrFirstPageable()
 	 */
 	public Pageable previousPageable() {
@@ -152,7 +139,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#iterator()
 	 */
 	public Iterator<T> iterator() {
@@ -161,7 +147,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getContent()
 	 */
 	public List<T> getContent() {
@@ -170,7 +155,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#hasContent()
 	 */
 	public boolean hasContent() {
@@ -179,7 +163,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.springframework.data.domain.Page#getSort()
 	 */
 	public Sort getSort() {
@@ -188,7 +171,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -205,7 +187,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -230,7 +211,6 @@ public class PageImpl<T> implements Page<T>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override

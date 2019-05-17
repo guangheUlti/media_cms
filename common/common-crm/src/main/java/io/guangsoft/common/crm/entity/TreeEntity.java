@@ -13,8 +13,6 @@ import java.util.List;
 
 /**
  * 树抽象实体基类
- * 
- *
  */
 public abstract class TreeEntity<T> extends AbstractEntity<String> implements TreeNode<String>,java.io.Serializable {
 	@TableId(value = "id", type = IdType.UUID)

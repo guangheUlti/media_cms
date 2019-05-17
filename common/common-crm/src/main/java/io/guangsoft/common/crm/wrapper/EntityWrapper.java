@@ -11,8 +11,6 @@ import java.lang.reflect.ParameterizedType;
 import java.util.*;
 
 /**
- * @description: 对象封装操作类，定义T-SQL语法
- * @version V1.0
  */
 @SuppressWarnings("serial")
 public class EntityWrapper<T> extends Wrapper<T> {

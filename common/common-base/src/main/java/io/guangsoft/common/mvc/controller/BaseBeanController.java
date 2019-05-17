@@ -54,8 +54,6 @@ public abstract class BaseBeanController<Entity extends Serializable> extends Ba
 	}
 
 	/**
-	 * 
-	 * @description: 错误信息组装
 	 * @param result
 	 * @return
 	 * @return: String

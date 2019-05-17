@@ -51,7 +51,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 
 	/**
 	 * list 运行之前
-	 * 
 	 * @param model
 	 * @param request
 	 * @param response
@@ -68,7 +67,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 
 	/**
 	 * 在异步获取数据之前
-	 * 
 	 * @param entityWrapper
 	 * @param request
 	 * @param response
@@ -79,7 +77,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 
 	/**
 	 * 根据页码和每页记录数，以及查询条件动态加载数据
-	 * 
 	 * @param request
 	 * @param response
 	 * @throws IOException
@@ -104,8 +101,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 	}
 
 	/**
-	 * 
-	 * @description: 查看
 	 * @param model
 	 * @param id
 	 * @param request
@@ -180,7 +175,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 
 	/**
 	 * 保存数据之前
-	 * 
 	 * @param entity
 	 * @param request
 	 * @param response
@@ -221,7 +215,6 @@ public abstract class BaseCRUDController<Entity extends AbstractEntity<ID>, ID e
 
 	/**
 	 * 保存数据之后
-	 * 
 	 * @param entity
 	 * @param request
 	 * @param response

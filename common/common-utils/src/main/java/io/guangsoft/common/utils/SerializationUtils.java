@@ -6,9 +6,7 @@ import org.apache.commons.codec.binary.Hex;
 import java.io.Serializable;
 
 /**
- * @description: 序列化工具
  * @author: guanghe
- * @version V1.0
  */
 public class SerializationUtils extends org.apache.commons.lang3.SerializationUtils {
 

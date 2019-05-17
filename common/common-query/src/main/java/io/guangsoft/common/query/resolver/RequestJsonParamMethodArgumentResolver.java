@@ -22,9 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 
  * 解析请求参数json字符串
- * 
  * @author guanghe
  * @since 3.1
  */

@@ -12,7 +12,6 @@ import java.lang.reflect.Method;
 
 /**
  * 权限注解处理器
- * 
  */
 @SuppressWarnings({ "unchecked", "serial" })
 public class AuthorizationAdvisor extends AuthorizationAttributeSourceAdvisor {
@@ -50,7 +49,6 @@ public class AuthorizationAdvisor extends AuthorizationAttributeSourceAdvisor {
 
 	/**
 	 * 查看BaseController的子类是否有权限注解
-	 * 
 	 * @param clazz
 	 * @return
 	 */
@@ -66,7 +64,6 @@ public class AuthorizationAdvisor extends AuthorizationAttributeSourceAdvisor {
 
 	/**
 	 * 查看方法是否有web注解，是否是一个rest接口
-	 * 
 	 * @param method
 	 * @return
 	 */

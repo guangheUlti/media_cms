@@ -9,7 +9,6 @@ import java.util.Arrays;
 
 /**
  * 拦截器
- * 
  */
 public class RolesAllowedAnnotationHandler extends AuthorizingAnnotationHandler {
 

@@ -21,7 +21,6 @@ import java.util.concurrent.ConcurrentMap;
  * 使用Jaxb2.0实现XML<->Java Object的Mapper.
  * 在创建时需要设定所有需要序列化的Root对象的Class. 特别支持Root对象是Collection的情形.
  * @author guanghe
- * @version 2018-08-05
  */
 public class JaxbMapper {
 

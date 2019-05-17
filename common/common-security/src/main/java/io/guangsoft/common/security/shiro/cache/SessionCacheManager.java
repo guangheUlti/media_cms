@@ -23,8 +23,6 @@ import java.util.Set;
 
 /**
  * 缓存
- * 
- * @version 2017-02-23
  */
 public class SessionCacheManager implements CacheManager {
 

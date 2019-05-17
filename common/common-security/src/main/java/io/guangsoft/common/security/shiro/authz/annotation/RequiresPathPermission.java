@@ -7,7 +7,6 @@ import java.lang.annotation.Target;
 
 /**
  * 自定义权限注册 需要配合RequiresMethodPermissions 使用
- * 
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

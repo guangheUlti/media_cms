@@ -9,7 +9,6 @@ import java.util.Date;
 /**
  * 日期工具类, 继承org.apache.commons.lang3.time.DateUtils类
  * @author guanghe
- * @version V 1.0
  */
 
 public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
@@ -183,7 +182,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	
 	/** 
      * 将一个时间戳转换成提示性时间字符串，如刚刚，1秒前 
-     *  
      * @param before 时间格式化
      * @return 
      */  

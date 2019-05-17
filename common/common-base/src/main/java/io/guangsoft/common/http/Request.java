@@ -5,8 +5,6 @@ import java.io.Serializable;
 import java.util.LinkedHashMap;
 
 /**
- * @version V1.0
- * @description: 数据请求实体
  */
 public class Request extends LinkedHashMap<String, Object> implements Serializable {
     private static final long serialVersionUID = 1L;

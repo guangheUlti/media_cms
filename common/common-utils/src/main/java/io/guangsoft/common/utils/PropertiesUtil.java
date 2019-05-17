@@ -11,7 +11,6 @@ import java.util.Properties;
 /**
  * Properties文件工具类
  * @author guanghe
- * @version 2017-01-19
  */
 public class PropertiesUtil extends ObjectSwitchHelper {
 	/**

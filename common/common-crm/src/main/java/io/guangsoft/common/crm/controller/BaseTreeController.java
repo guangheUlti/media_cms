@@ -40,7 +40,6 @@ public abstract class BaseTreeController<Entity extends AbstractEntity<ID> & Tre
 
 	/**
 	 * 根据页码和每页记录数，以及查询条件动态加载数据
-	 * 
 	 * @param request
 	 * @param response
 	 * @throws IOException
@@ -79,7 +78,6 @@ public abstract class BaseTreeController<Entity extends AbstractEntity<ID> & Tre
 
 	/**
 	 * 根据页码和每页记录数，以及查询条件动态加载数据
-	 * 
 	 * @param request
 	 * @param response
 	 * @throws IOException
@@ -118,7 +116,6 @@ public abstract class BaseTreeController<Entity extends AbstractEntity<ID> & Tre
 
 	/**
 	 * 根据页码和每页记录数，以及查询条件动态加载数据
-	 * 
 	 * @param request
 	 * @param response
 	 * @throws IOException

@@ -1,10 +1,6 @@
 package io.guangsoft.common.disruptor;
 
 /**
- * 
- *
- * @description: 内容传递
- * @version V1.0
  */
 public class TaskEvent {
    private Task task;

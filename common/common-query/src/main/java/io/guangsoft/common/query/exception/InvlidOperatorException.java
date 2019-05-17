@@ -3,7 +3,6 @@ package io.guangsoft.common.query.exception;
 import io.guangsoft.common.query.data.Condition.Operator;
 
 /**
- * 
  * @author guanghe
  */
 @SuppressWarnings("serial")

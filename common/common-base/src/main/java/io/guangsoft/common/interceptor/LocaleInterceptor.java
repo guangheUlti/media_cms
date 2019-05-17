@@ -11,8 +11,6 @@ import java.util.Locale;
 
 /**
  * 国际化的拦截器
- * 
- * @version V 1.0
  */
 public class LocaleInterceptor implements HandlerInterceptor {
 

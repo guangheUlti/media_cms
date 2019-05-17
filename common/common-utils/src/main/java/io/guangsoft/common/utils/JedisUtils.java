@@ -15,9 +15,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @description: Jedis Cache 工具类
  * @author: guanghe
- * @version V1.0
  */
 public class JedisUtils {
 

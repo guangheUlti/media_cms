@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * @version V1.0
- * @description: PDF加水印
  * @author: guanghe
  */
 public class PdfWatermarkUtils {

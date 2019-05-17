@@ -2,7 +2,6 @@ package io.guangsoft.common.http;
 
 /**
  * 重复验证
- * 
  */
 @SuppressWarnings("serial")
 public class DuplicateValid implements java.io.Serializable {

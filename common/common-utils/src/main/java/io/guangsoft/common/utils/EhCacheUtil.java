@@ -5,9 +5,7 @@ import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
 /**
- * @description: 缓存基础类
  * @author: guanghe
- * @version V1.0
  */
 public class EhCacheUtil extends ObjectSwitchHelper {
 
@@ -56,7 +54,6 @@ public class EhCacheUtil extends ObjectSwitchHelper {
 		return false;
 	}
     /**
-     * @description: 清除所有緩存
      * @return: void
      */
 	public void removeAll() {

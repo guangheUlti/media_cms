@@ -7,9 +7,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * @description: 对象工具类
  * @author: guanghe
- * @version V1.0
  */
 
 @SuppressWarnings("rawtypes")

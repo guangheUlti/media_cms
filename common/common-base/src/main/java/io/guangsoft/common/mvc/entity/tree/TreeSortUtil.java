@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * 树排序
- * 
  */
 public class TreeSortUtil<ID extends Serializable> implements Serializable {
 
@@ -42,7 +41,6 @@ public class TreeSortUtil<ID extends Serializable> implements Serializable {
 
 	/**
 	 * 解析根节点
-	 * 
 	 * @param node
 	 */
 	public void parseSubNode(TreeNode<ID> node) {

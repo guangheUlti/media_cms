@@ -18,8 +18,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @version V1.0
- * @description: 获取地址类
  * @author: guanghe
  */
 public class AddressUtils

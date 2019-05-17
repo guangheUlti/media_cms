@@ -96,7 +96,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * 判断是否为数字
      * @param str
      * @return
-     * @Description: 判断是否为数字
      * @return: boolean
      */
     public static boolean isNumeric(String str) {
@@ -111,7 +110,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param param
      * @return
-     * @description: 驼峰转下划线
      * @return: String
      */
     public static String camelToUnderline(String param) {
@@ -135,7 +133,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param param
      * @return
-     * @description:下划线转驼峰
      * @return: String
      */
     public static String underlineToCamel(String param) {
@@ -160,7 +157,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param param
      * @return
-     * @description: 驼峰转下划线
      * @return: String
      */
     public static String camelToStrikethrough(String param) {
@@ -184,7 +180,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param param
      * @return
-     * @description:下划线转驼峰
      * @return: String
      */
     public static String strikethroughToCamel(String param) {
@@ -254,7 +249,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param filename
      * @return
-     * @description: Java文件操作 获取文件扩展名
      * @return: String
      */
     public static String getExtensionName(String filename) {
@@ -270,7 +264,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /**
      * @param filename
      * @return
-     * @description: Java文件操作 获取不带扩展名的文件名
      * @return: String
      */
     public static String getFileNameNoEx(String filename) {

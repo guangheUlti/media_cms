@@ -49,7 +49,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * its default if it is available. The model attribute is then populated
 	 * with request values via data binding and optionally validated if
 	 * {@code @java.validation.Valid} is present on the argument.
-	 * 
 	 * @throws BindException
 	 *             if data binding and validation result in an error and the
 	 *             next method parameter is not of type {@link Errors}.
@@ -85,7 +84,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	/**
 	 * Extension point to create the model attribute if not found in the model.
 	 * The default implementation uses the default constructor.
-	 * 
 	 * @param attributeName
 	 *            the name of the attribute, never {@code null}
 	 * @param parameter
@@ -128,7 +126,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * <p>
 	 * The default implementation looks for the attribute name to match a URI
 	 * variable first and then a request parameter.
-	 * 
 	 * @param attributeName
 	 *            the model attribute name
 	 * @param request
@@ -158,7 +155,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * <p>
 	 * The default implementation converts only if there a registered
 	 * {@link Converter} that can perform the conversion.
-	 * 
 	 * @param sourceValue
 	 *            the source value to create the model attribute from
 	 * @param attributeName
@@ -191,7 +187,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * <p>
 	 * Downcast {@link WebDataBinder} to {@link ServletRequestDataBinder} before
 	 * binding.
-	 * 
 	 * @throws Exception
 	 * @see ServletRequestDataBinderFactory
 	 */
@@ -390,7 +385,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * Validate the model attribute if applicable.
 	 * <p>
 	 * The default implementation checks for {@code @javax.validation.Valid}.
-	 * 
 	 * @param binder
 	 *            the DataBinder to be used
 	 * @param parameter
@@ -410,7 +404,6 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
 	 * Whether to raise a {@link BindException} on bind or validation errors.
 	 * The default implementation returns {@code true} if the next method
 	 * argument is not of type {@link Errors}.
-	 * 
 	 * @param binder
 	 *            the data binder used to perform data binding
 	 * @param parameter

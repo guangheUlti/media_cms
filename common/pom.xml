@@ -22,6 +22,7 @@
         <module>common-base</module>
         <module>common-security</module>
         <module>common-crm</module>
+        <module>common-quartz</module>
     </modules>
     <build>
         <finalName>${project.artifactId}</finalName>

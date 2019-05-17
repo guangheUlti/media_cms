@@ -3,9 +3,7 @@ package io.guangsoft.common.utils;
 import org.apache.commons.io.FilenameUtils;
 
 /**
- * @description: 判断判断文件
  * @author: guanghe
- * @version V1.0
  */
 public class ImagesUtils {
 

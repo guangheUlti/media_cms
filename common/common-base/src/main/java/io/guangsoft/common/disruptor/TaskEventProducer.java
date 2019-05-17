@@ -5,8 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @description: 内容生产者
- * @version V1.0
  */
 public class TaskEventProducer {
 	private static Logger logger = LoggerFactory.getLogger(TaskEventProducer.class);

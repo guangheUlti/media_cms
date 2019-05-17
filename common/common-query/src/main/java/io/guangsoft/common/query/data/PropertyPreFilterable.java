@@ -3,10 +3,6 @@ package io.guangsoft.common.query.data;
 import com.alibaba.fastjson.serializer.SerializeFilter;
 
 /**
- * 
- *
- * @description: JSON格式化输出
- * @version V1.0
  */
 public interface PropertyPreFilterable {
 	

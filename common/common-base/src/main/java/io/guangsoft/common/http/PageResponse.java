@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * 页面展示分页
- * 
  * @param <T>
  */
 public class PageResponse<T> extends Response implements Serializable {

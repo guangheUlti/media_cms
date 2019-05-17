@@ -12,9 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * @Description: FreeMarker模版工具
  * @author: guanghe
- * @version V1.0
  */
 public class FreeMarkerUtils {
 

@@ -14,7 +14,6 @@ import java.util.Set;
 
 /**
  * @ClassName: BeanUtils
- * @Description:Bean操作类
  * @author: guanghe
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils{

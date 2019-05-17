@@ -65,7 +65,6 @@ import java.util.*;
  * <p>
  *          <p>
  *        <p>
- * @version: 1.0
  */
 public class PageableMethodArgumentResolver extends BaseMethodArgumentResolver {
 

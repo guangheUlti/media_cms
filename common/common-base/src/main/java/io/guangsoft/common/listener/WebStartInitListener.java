@@ -5,8 +5,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 /**
- * @description:   程序启动完成打印一个日志
- * @version V1.0
  */
 public class WebStartInitListener implements ApplicationListener<ContextRefreshedEvent> {
 

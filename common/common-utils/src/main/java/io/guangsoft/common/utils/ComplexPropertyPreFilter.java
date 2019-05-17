@@ -11,9 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @description: fastjson字段过滤
  * @author: guanghe
- * @version V1.0
  */
 public class ComplexPropertyPreFilter implements PropertyPreFilter {
 

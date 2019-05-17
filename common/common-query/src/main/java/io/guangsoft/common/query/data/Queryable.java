@@ -2,13 +2,11 @@ package io.guangsoft.common.query.data;
 
 /**
  * 查询接口
- * 
  * @author guanghe
  */
 public interface Queryable {
 	/**
 	 * 获得分页
-	 * 
 	 * @return
 	 */
 	public Pageable getPageable();
@@ -17,7 +15,6 @@ public interface Queryable {
 
 	/**
 	 * 获得排序
-	 * 
 	 * @return
 	 */
 	public Sort getSort();
@@ -26,7 +23,6 @@ public interface Queryable {
 
 	/**
 	 * 获得查询条件
-	 * 
 	 * @return
 	 */
 	public Condition getCondition();
@@ -35,14 +31,12 @@ public interface Queryable {
 
 	/**
 	 * 通过字段获得值，方便自定义查询
-	 * 
 	 * @return
 	 */
 	public Object getValue(String property);
 
 	/**
 	 * 添加条件
-	 * 
 	 * @param operator
 	 * @param property
 	 * @param value
@@ -52,7 +46,6 @@ public interface Queryable {
 
 	/**
 	 * 移出条件，方便自定义条件
-	 * 
 	 * @param property
 	 */
 	public void removeCondition(String property);

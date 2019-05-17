@@ -18,9 +18,7 @@ import com.octo.captcha.image.gimpy.GimpyFactory;
 import java.awt.*;
 
 /**
- * @description: 生成验证码图片
  * @author: guanghe
- * @version V1.0
  */
 @SuppressWarnings("deprecation")
 public class JCaptchaEngine extends ListImageCaptchaEngine {

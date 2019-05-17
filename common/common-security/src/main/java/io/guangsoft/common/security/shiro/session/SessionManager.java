@@ -22,8 +22,6 @@ import java.util.Date;
 
 /**
  * 自定义WEB会话管理类
- * 
- * @version 2017-02-23
  */
 public class SessionManager extends DefaultWebSessionManager {
 

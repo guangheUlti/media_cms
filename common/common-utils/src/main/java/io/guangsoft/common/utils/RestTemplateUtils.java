@@ -12,9 +12,7 @@ import java.util.Enumeration;
 import java.util.Map;
 
 /**
- * @description: 请求工具
  * @author: guanghe
- * @version V1.0
  */
 public class RestTemplateUtils {
     

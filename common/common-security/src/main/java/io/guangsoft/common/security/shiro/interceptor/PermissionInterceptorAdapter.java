@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 权限拦截器
- * 
  */
 public class PermissionInterceptorAdapter extends HandlerInterceptorAdapter {
 

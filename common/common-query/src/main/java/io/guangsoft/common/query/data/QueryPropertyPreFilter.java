@@ -9,10 +9,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 
- *
- * @description: JSON格式化输出
- * @version V1.0
  * @param <T>
  *             http://www.cnblogs.com/sandyfog/articles/3679804.html
  *             http://www.cnblogs.com/dirgo/p/5178629.html Filter DEMO

@@ -18,8 +18,6 @@ import java.util.Date;
 
 /**
  * 基础控制器 http://blog.csdn.net/catoop/article/details/51278675 写得不错的表单验证
- * 
- * @version V 1.0
  */
 public class BaseController {
 	/**
@@ -34,7 +32,6 @@ public class BaseController {
 
 	/**
 	 * 返回JSON字符串
-	 * 
 	 * @param response
 	 * @param object
 	 * @return
@@ -46,7 +43,6 @@ public class BaseController {
 
 	/**
 	 * 打印字符串到页面
-	 * 
 	 * @param response
 	 * @param string
 	 * @return
@@ -63,7 +59,6 @@ public class BaseController {
 
 	/**
 	 * 初始化数据绑定
-	 * 
 	 * @param binder
 	 */
 	@InitBinder

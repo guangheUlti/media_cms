@@ -20,8 +20,6 @@ import java.util.Set;
 
 /**
  * 自定义WEB会话管理类
- * 
- * @version 2017-02-23
  */
 public class CacheSessionDAO extends EnterpriseCacheSessionDAO implements SessionDAO {
 
@@ -101,7 +99,6 @@ public class CacheSessionDAO extends EnterpriseCacheSessionDAO implements Sessio
 
 	/**
 	 * 获取活动会话
-	 * 
 	 * @param includeLeave
 	 *            是否包括离线（最后访问时间大于3分钟为离线会话）
 	 * @return
@@ -113,7 +110,6 @@ public class CacheSessionDAO extends EnterpriseCacheSessionDAO implements Sessio
 
 	/**
 	 * 获取活动会话
-	 * 
 	 * @param includeLeave
 	 *            是否包括离线（最后访问时间大于3分钟为离线会话）
 	 * @param principal

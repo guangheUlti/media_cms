@@ -3,9 +3,7 @@ package io.guangsoft.common.utils;
 import java.io.*;
 
 /**
- * @description: 文件操作类
  * @author: guanghe
- * @version V1.0
  */
 public class FileUtils extends org.apache.commons.io.FileUtils {
 	// 验证字符串是否为正确路径名的正则表达式

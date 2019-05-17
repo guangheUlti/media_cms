@@ -23,7 +23,6 @@ import java.util.Set;
 
 /**
  * 自定义授权会话管理类
- * 
  */
 public class JedisSessionDAO extends AbstractSessionDAO implements SessionDAO {
 
@@ -104,7 +103,6 @@ public class JedisSessionDAO extends AbstractSessionDAO implements SessionDAO {
 
 	/**
 	 * 获取活动会话
-	 * 
 	 * @param includeLeave
 	 *            是否包括离线（最后访问时间大于3分钟为离线会话）
 	 * @return
@@ -116,7 +114,6 @@ public class JedisSessionDAO extends AbstractSessionDAO implements SessionDAO {
 
 	/**
 	 * 获取活动会话
-	 * 
 	 * @param includeLeave
 	 *            是否包括离线（最后访问时间大于3分钟为离线会话）
 	 * @param principal

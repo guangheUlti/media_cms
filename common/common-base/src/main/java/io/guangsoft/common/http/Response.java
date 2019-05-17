@@ -11,8 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @version V1.0
- * @description: 数据响应实体
  */
 public class Response extends HashMap<String,Object> implements Serializable {
     private static  final int OK_CODE = 0;

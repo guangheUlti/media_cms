@@ -6,9 +6,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * @description:Jar文件操作工具
  * @author: guanghe
- * @version V1.0
  */
 public class JarUtils {
 

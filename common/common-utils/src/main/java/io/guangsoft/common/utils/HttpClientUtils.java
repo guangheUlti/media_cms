@@ -21,8 +21,6 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 /**
- * @version V1.0
- * @description: http请求
  * @author: guanghe
  */
 public class HttpClientUtils {

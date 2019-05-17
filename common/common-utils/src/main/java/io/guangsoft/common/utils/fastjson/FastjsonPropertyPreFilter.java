@@ -7,9 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @description: JSON格式化输出
  * @author: guanghe
- * @version V1.0
  */
 public class  FastjsonPropertyPreFilter extends ComplexPropertyPreFilter{
 

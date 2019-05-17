@@ -7,8 +7,6 @@ import com.alibaba.fastjson.serializer.SerializeFilter;
 
 /**
  * All rights Reserved, Designed By www.dataact.cn
- * @version V1.0
- * @description: 打印json
  * @author: guanghe
  */
 public class FastJsonUtils {

@@ -11,10 +11,6 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * 
- *
- * @description: 自动注入器
- * @version V1.0
  */
 public class AutoSqlInjector extends com.baomidou.mybatisplus.mapper.AutoSqlInjector {
 	@Override

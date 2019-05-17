@@ -9,8 +9,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import java.util.Map;
 
 /**
- * @description:   spring容器初始化完成事件
- * @version V1.0
  */
 public class ApplicationContextListener implements ApplicationListener<ContextRefreshedEvent> {
 

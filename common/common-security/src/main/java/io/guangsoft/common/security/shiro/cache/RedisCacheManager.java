@@ -1,8 +1,6 @@
 package io.guangsoft.common.security.shiro.cache;
 
 /**
- * @version V1.0
- * @description: Shiro缓存管理
  */
 
 import org.apache.shiro.cache.Cache;

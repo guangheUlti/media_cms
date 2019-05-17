@@ -14,7 +14,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Creates a new {@link Sort} instance using the given {@link Order}s.
-	 * 
 	 * @param orders
 	 *            must not be {@literal null}.
 	 */
@@ -24,7 +23,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Creates a new {@link Sort} instance.
-	 * 
 	 * @param orders
 	 *            must not be {@literal null} or contain {@literal null}.
 	 */
@@ -40,7 +38,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 	/**
 	 * Creates a new {@link Sort} instance. Order defaults to
 	 * {@value Direction#ASC}.
-	 * 
 	 * @param properties
 	 *            must not be {@literal null} or contain {@literal null} or
 	 *            empty strings
@@ -51,7 +48,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Creates a new {@link Sort} instance.
-	 * 
 	 * @param direction
 	 *            defaults to {@linke Sort#DEFAULT_DIRECTION} (for
 	 *            {@literal null} cases, too)
@@ -65,7 +61,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Creates a new {@link Sort} instance.
-	 * 
 	 * @param direction
 	 * @param properties
 	 */
@@ -85,7 +80,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 	/**
 	 * Returns a new {@link Sort} consisting of the {@link Order}s of the
 	 * current {@link Sort} combined with the given ones.
-	 * 
 	 * @param sort
 	 *            can be {@literal null}.
 	 * @return
@@ -107,7 +101,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Returns the order registered for the given property.
-	 * 
 	 * @param property
 	 * @return
 	 */
@@ -124,7 +117,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Iterable#iterator()
 	 */
 	public Iterator<Order> iterator() {
@@ -133,7 +125,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -154,7 +145,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -167,7 +157,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -177,7 +166,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Enumeration for sort directions.
-	 * 
 	 * @author Oliver Gierke
 	 */
 	public static enum Direction {
@@ -187,7 +175,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 		/**
 		 * Returns the {@link Direction} enum for the given {@link String}
 		 * value.
-		 * 
 		 * @param value
 		 * @throws IllegalArgumentException
 		 *             in case the given value cannot be parsed into an enum
@@ -208,7 +195,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 		/**
 		 * Returns the {@link Direction} enum for the given {@link String} or
 		 * null if it cannot be parsed into an enum value.
-		 * 
 		 * @param value
 		 * @return
 		 */
@@ -225,7 +211,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 	/**
 	 * PropertyPath implements the pairing of an {@link Direction} and a
 	 * property. It is used to provide input for {@link Sort}
-	 * 
 	 * @author Oliver Gierke
 	 * @author Kevin Raymond
 	 */
@@ -241,7 +226,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 		/**
 		 * Creates a new {@link Order} instance. if order is {@literal null}
 		 * then order defaults to {@link Sort#DEFAULT_DIRECTION}
-		 * 
 		 * @param direction
 		 *            can be {@literal null}, will default to
 		 *            {@link Sort#DEFAULT_DIRECTION}
@@ -256,7 +240,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 		/**
 		 * Creates a new {@link Order} instance. Takes a single property.
 		 * Direction defaults to {@link Sort#DEFAULT_DIRECTION}.
-		 * 
 		 * @param property
 		 *            must not be {@literal null} or empty.
 		 */
@@ -267,7 +250,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 		/**
 		 * Creates a new {@link Order} instance. if order is {@literal null}
 		 * then order defaults to {@link Sort#DEFAULT_DIRECTION}
-		 * 
 		 * @param direction
 		 *            can be {@literal null}, will default to
 		 *            {@link Sort#DEFAULT_DIRECTION}
@@ -303,7 +285,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns the order the property shall be sorted for.
-		 * 
 		 * @return
 		 */
 		public Direction getDirection() {
@@ -312,7 +293,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns the property to order for.
-		 * 
 		 * @return
 		 */
 		public String getProperty() {
@@ -321,7 +301,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns whether sorting for this property shall be ascending.
-		 * 
 		 * @return
 		 */
 		public boolean isAscending() {
@@ -330,7 +309,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns whether or not the sort will be case sensitive.
-		 * 
 		 * @return
 		 */
 		public boolean isIgnoreCase() {
@@ -339,7 +317,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns a new {@link Order} with the given {@link Order}.
-		 * 
 		 * @param order
 		 * @return
 		 */
@@ -349,7 +326,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns a new {@link Sort} instance for the given properties.
-		 * 
 		 * @param properties
 		 * @return
 		 */
@@ -359,7 +335,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/**
 		 * Returns a new {@link Order} with case insensitive sorting enabled.
-		 * 
 		 * @return
 		 */
 		public Order ignoreCase() {
@@ -368,7 +343,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/*
 		 * (non-Javadoc)
-		 * 
 		 * @see java.lang.Object#hashCode()
 		 */
 		@Override
@@ -384,7 +358,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/*
 		 * (non-Javadoc)
-		 * 
 		 * @see java.lang.Object#equals(java.lang.Object)
 		 */
 		@Override
@@ -405,7 +378,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 		/*
 		 * (non-Javadoc)
-		 * 
 		 * @see java.lang.Object#toString()
 		 */
 		@Override
