@@ -7,9 +7,6 @@ import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * http://blog.csdn.net/blueheart20/article/details/52384032
- */
 @Configuration
 public class DruidConfig {
 

@@ -62,11 +62,6 @@ public class QuartzConfig implements ApplicationRunner {
         String dataSourceBean=env.getProperty("quartz.data-source");
         if (StringUtils.isEmpty(dataSourceBean)||dataSourceBean.equals("default")) {
             schedulerFactoryBean.setDataSource(dataSource);
-        }else{
-           /* dataSource = SpringContextHolder.getBean(dataSourceBean);
-            if (dataSource != null) {
-                schedulerFactoryBean.setDataSource(dataSource);
-            }*/
         }
         schedulerFactoryBean.setQuartzProperties(quartzProperties());
         schedulerFactoryBean.setSchedulerName("cmsScheduler");
