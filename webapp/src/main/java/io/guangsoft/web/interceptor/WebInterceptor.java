@@ -30,7 +30,6 @@ public class WebInterceptor extends HandlerInterceptorAdapter {
         String ctx = request.getServletContext().getContextPath();
         request.setAttribute("ctx",ctx);
         request.setAttribute("adminPath",ctx + "/admin");
-        request.setAttribute("theme", ThemeUtils.getTheme());
         request.setAttribute("staticPath",ctx + "/static");
         request.setAttribute("platformName", MessageUtils.getMessage("platform.name"));
         request.setAttribute("platformCopyright", MessageUtils.getMessage("platform.copyright"));

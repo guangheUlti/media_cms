@@ -2,12 +2,6 @@ package io.guangsoft.common.utils;
 
 import org.springframework.context.MessageSource;
 
-/**
- * http://blog.csdn.net/hj7jay/article/details/51383248 Java
- * SpringMVC实现国际化整合案例分析（i18n） http://www.cnblogs.com/liukemng/p/3750117.html
- * SpringMVC学习系列（8） 之 国际化 http://blog.csdn.net/qyf_5445/article/details/8124306
- * spring中MessageSource的配置使用方法1
- */
 public class MessageUtils {
 
 	private static MessageSource messageSource;

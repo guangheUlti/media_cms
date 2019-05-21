@@ -1,7 +1,7 @@
 server:
     port: 8080
 
-upload-file-path:D:/upload-file
+upload-file-path: D:/upload-file
 
 #spring
 spring:
@@ -24,6 +24,8 @@ spring:
             max-idle: 8
             min-idle: 0
             max-wait: 10000s
+  messages: #国际化
+      basename: i18n/messages,i18n/ValidationMessages
   mvc: # 捕获404
       throw-exception-if-no-handler-found: true
   resources:
