@@ -12,7 +12,6 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * @author: guanghe
  */
 public class FreeMarkerUtils {
 

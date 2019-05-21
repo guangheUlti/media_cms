@@ -23,7 +23,6 @@ import java.awt.image.ImageFilter;
 
 /**
  * 仿照JCaptcha2.0编写GMail验证码样式的图片引擎.
- * @author guanghe
  */
 @SuppressWarnings("deprecation")
 public class GMailEngine extends ListImageCaptchaEngine {

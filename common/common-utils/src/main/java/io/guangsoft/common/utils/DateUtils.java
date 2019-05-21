@@ -8,7 +8,6 @@ import java.util.Date;
 
 /**
  * 日期工具类, 继承org.apache.commons.lang3.time.DateUtils类
- * @author guanghe
  */
 
 public class DateUtils extends org.apache.commons.lang3.time.DateUtils {

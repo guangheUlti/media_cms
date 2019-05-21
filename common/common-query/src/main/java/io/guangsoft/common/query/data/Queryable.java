@@ -2,7 +2,6 @@ package io.guangsoft.common.query.data;
 
 /**
  * 查询接口
- * @author guanghe
  */
 public interface Queryable {
 	/**

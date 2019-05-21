@@ -7,7 +7,6 @@ import java.io.*;
 
 /**
  * 文件操作类
- * @author guanghe
  */
 public class FileUtil extends FileUtils {
 	// 验证字符串是否为正确路径名的正则表达式

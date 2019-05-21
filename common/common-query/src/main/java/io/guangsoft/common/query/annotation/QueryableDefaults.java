@@ -10,7 +10,6 @@ import java.lang.annotation.*;
  *     格式如下：
  *     value = {"baseInfo.age_lt=123", "name_like=abc", "id_in=1,2,3,4"}
  * </pre>
- * @author guanghe
  */
 @Target({ ElementType.METHOD, ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)

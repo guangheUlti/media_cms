@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author: guanghe
  */
 public class AddressUtils
 {

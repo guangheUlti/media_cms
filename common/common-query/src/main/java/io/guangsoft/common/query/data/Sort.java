@@ -166,7 +166,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 
 	/**
 	 * Enumeration for sort directions.
-	 * @author Oliver Gierke
 	 */
 	public static enum Direction {
 
@@ -211,8 +210,6 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
 	/**
 	 * PropertyPath implements the pairing of an {@link Direction} and a
 	 * property. It is used to provide input for {@link Sort}
-	 * @author Oliver Gierke
-	 * @author Kevin Raymond
 	 */
 	public static class Order implements Serializable {
 

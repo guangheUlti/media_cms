@@ -5,7 +5,6 @@ import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
 /**
- * @author: guanghe
  */
 public class CacheUtils {
 

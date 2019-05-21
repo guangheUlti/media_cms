@@ -6,7 +6,6 @@ import java.lang.annotation.*;
 /**
  * <p>绑定请求参数到模型，并且暴露到模型中供页面使用</p>
  * <p>不同于@ModelAttribute</p>
- * @author guanghe
  */
 @Target({ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)

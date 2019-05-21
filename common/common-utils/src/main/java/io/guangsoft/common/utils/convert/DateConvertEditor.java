@@ -7,7 +7,6 @@ import java.beans.PropertyEditorSupport;
 
 /**
  * 时间处理类
- * @author guanghe
  */
 public class DateConvertEditor extends PropertyEditorSupport {
 

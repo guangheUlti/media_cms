@@ -4,7 +4,6 @@ import com.alibaba.fastjson.serializer.ValueFilter;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
- * @author: guanghe
  */
 public class FastjsonUnXssFilter implements ValueFilter {
 

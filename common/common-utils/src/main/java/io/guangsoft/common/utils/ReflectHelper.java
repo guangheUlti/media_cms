@@ -5,7 +5,6 @@ import java.util.Hashtable;
 import java.util.regex.Pattern;
 
 /**
- * @author guanghe
  * @desc 通过反射来动态调用get 和 set 方法
  */
 public class ReflectHelper {

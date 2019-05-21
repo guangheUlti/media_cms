@@ -14,7 +14,6 @@ import java.util.Set;
 
 /**
  * @ClassName: BeanUtils
- * @author: guanghe
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils{
 	/**

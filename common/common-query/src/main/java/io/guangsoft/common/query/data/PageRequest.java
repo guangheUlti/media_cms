@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * Basic Java Bean implementation of {@code Pageable}.
- * @author Oliver Gierke
  */
 public class PageRequest implements Pageable, Serializable {
 

@@ -12,7 +12,6 @@ import java.util.Enumeration;
 import java.util.Map;
 
 /**
- * @author: guanghe
  */
 public class RestTemplateUtils {
     

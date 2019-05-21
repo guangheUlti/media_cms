@@ -4,7 +4,6 @@ import java.lang.annotation.*;
 
 /**
  * 该注解用于绑定请求参数（JSON字符串）
- * @author guanghe
  */
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)

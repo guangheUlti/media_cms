@@ -11,7 +11,6 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author: guanghe
  */
 public class ComplexPropertyPreFilter implements PropertyPreFilter {
 

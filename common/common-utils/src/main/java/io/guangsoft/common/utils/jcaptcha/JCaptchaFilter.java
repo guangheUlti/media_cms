@@ -13,7 +13,6 @@ import java.io.IOException;
 
 /**
  * 生成验证码
- * @author guanghe
  */
 public class JCaptchaFilter extends OncePerRequestFilter {
 

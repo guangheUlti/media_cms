@@ -18,7 +18,6 @@ import com.octo.captcha.image.gimpy.GimpyFactory;
 import java.awt.*;
 
 /**
- * @author: guanghe
  */
 @SuppressWarnings("deprecation")
 public class JCaptchaEngine extends ListImageCaptchaEngine {

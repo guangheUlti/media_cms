@@ -2,7 +2,6 @@ package io.guangsoft.common.utils;
 
 /**
  * 对象转换类
- * @author guanghe
  */
 public abstract class ObjectParseHelper {
 

@@ -3,7 +3,6 @@ package io.guangsoft.common.utils;
 import org.apache.commons.io.FilenameUtils;
 
 /**
- * @author: guanghe
  */
 public class ImagesUtils {
 

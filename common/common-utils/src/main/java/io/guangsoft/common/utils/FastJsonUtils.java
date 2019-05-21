@@ -6,8 +6,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializeFilter;
 
 /**
- * All rights Reserved, Designed By www.dataact.cn
- * @author: guanghe
  */
 public class FastJsonUtils {
 

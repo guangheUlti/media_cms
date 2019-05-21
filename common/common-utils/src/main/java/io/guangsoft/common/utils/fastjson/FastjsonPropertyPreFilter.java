@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author: guanghe
  */
 public class  FastjsonPropertyPreFilter extends ComplexPropertyPreFilter{
 

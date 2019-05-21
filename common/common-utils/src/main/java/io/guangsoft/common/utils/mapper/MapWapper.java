@@ -17,7 +17,6 @@ import java.util.Set;
  * </p>
  * @param <K>
  * @param <V>
- * @author guanghe
  */
 public class MapWapper<K, V> {
 

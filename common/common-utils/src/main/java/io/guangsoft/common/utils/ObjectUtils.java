@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * @author: guanghe
  */
 
 @SuppressWarnings("rawtypes")

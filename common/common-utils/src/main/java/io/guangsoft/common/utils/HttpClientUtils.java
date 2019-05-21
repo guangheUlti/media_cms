@@ -21,7 +21,6 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 /**
- * @author: guanghe
  */
 public class HttpClientUtils {
     private static PoolingHttpClientConnectionManager cm;

@@ -61,7 +61,6 @@ public class MapBeanUtil {
 
 	/**
 	 * 当属性类型为接口时，传入的实际对象class不等于接口，会导致 NoSuchMethodException 异常
-	 * @author ly
 	 * @param obj
 	 * @param fieldname
 	 * @param value
@@ -389,7 +388,6 @@ public class MapBeanUtil {
 
 	/**
 	 * 当属性类型为接口时，传入的实际对象class不等于接口，会导致 NoSuchMethodException 异常
-	 * @author ly
 	 * @param obj
 	 * @param fieldname
 	 * @param value

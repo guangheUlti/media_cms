@@ -5,7 +5,6 @@ import java.beans.PropertyEditorSupport;
 
 /**
  * 字符串处理类 String类型转换，将所有传递进来的String进行HTML编码，防止XSS攻击
- * @author guanghe
  */
 public class StringConvertEditor extends PropertyEditorSupport {
 

@@ -2,7 +2,6 @@ package io.guangsoft.common.utils;
 
 /**
  * 加载基础
- * @author guanghe
  */
 public abstract class ObjectSwitchHelper {
 

@@ -55,7 +55,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * 判断是否是空字符串 null和"" 都返回 true
      * @param s
      * @return
-     * @author Robin Chang
      */
     public static boolean isEmpty(String s) {
         if (s != null && !s.equals("")) {

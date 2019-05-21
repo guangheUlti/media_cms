@@ -10,7 +10,6 @@ import java.util.Properties;
 
 /**
  * Properties文件工具类
- * @author guanghe
  */
 public class PropertiesUtil extends ObjectSwitchHelper {
 	/**
