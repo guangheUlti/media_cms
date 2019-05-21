@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/monitor/druid")
+@RequestMapping("${cms.admin.url.prefix}/monitor/druid")
 @ViewPrefix("modules/monitor/druid")
 @RequiresPathPermission("monitor:druid")
 public class DruidController extends BaseController {

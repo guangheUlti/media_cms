@@ -35,7 +35,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/dict")
+@RequestMapping("${cms.admin.url.prefix}/sys/dict")
 @ViewPrefix("modules/sys/dict")
 @RequiresPathPermission("sys:dict")
 @Log(title = "字典管理")

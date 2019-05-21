@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/tool/swagger")
+@RequestMapping("${cms.admin.url.prefix}/tool/swagger")
 @ViewPrefix("modules/tool/swagger")
 @RequiresPathPermission("tool:swagger")
 public class SwaggerController extends BaseController {

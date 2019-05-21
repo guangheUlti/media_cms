@@ -1,6 +1,6 @@
 @echo off
 
-set APP_NAME=jeeweb-admin.jar
+set APP_NAME=cms-admin.jar
 
 set CONFIG= -Dlogging.path=../logs  -Dspring.config.location=../conf/application.yml
 

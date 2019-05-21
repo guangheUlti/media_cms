@@ -3,8 +3,6 @@ package io.guangsoft.web.modules.sys.controller;
 import io.guangsoft.web.modules.oa.entity.OaNotification;
 import io.guangsoft.web.modules.oa.service.IOaNotificationService;
 import io.guangsoft.common.crm.wrapper.EntityWrapper;
-import io.guangsoft.common.utils.StringUtils;
-import io.guangsoft.web.utils.ThemeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,7 +28,7 @@ public class IndexController {
 		return new ModelAndView("redirect:/admin");
 	}
 
-	@RequestMapping(value = "${jeeweb.admin.url.prefix}",method = RequestMethod.GET)
+	@RequestMapping(value = "${cms.admin.url.prefix}",method = RequestMethod.GET)
 	public String index(Model model) {
 		// 加载通知公告
 		int oaNotificationCount = oaNotificationService
@@ -40,22 +38,18 @@ public class IndexController {
 		model.addAttribute("oaNotificationCount", oaNotificationCount);
 		model.addAttribute("oaNotifications", oaNotifications);
 		// 加载模版
-		String theme = ThemeUtils.getTheme();
-		return "modules/sys/index/index-" + theme;
+		return "modules/sys/index/index";
 	}
 
 	/**
 	 * Coookie设置
 	 */
-	@RequestMapping(value = "${jeeweb.admin.url.prefix}/theme/{theme}")
+	@RequestMapping(value = "${cms.admin.url.prefix}/theme/{theme}")
 	public String themeCookie(@PathVariable String theme, HttpServletRequest request) {
-		if (StringUtils.isNotBlank(theme)) {
-			ThemeUtils.setTheme(theme);
-		}
 		return "redirect:" + request.getParameter("url");
 	}
 
-	@RequestMapping("${jeeweb.admin.url.prefix}/main")
+	@RequestMapping("${cms.admin.url.prefix}/main")
 	public String main() {
 		return "modules/sys/index/main";
 	}

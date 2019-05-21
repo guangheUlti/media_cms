@@ -44,7 +44,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/user")
+@RequestMapping("${cms.admin.url.prefix}/sys/user")
 @ViewPrefix("modules/sys/user")
 @RequiresPathPermission("sys:user")
 @Log(title = "用户管理")

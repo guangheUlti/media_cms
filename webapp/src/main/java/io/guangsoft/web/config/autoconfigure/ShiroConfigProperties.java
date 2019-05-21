@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  */
-@ConfigurationProperties(prefix = "jeeweb.shiro")
+@ConfigurationProperties(prefix = "cms.shiro")
 public class ShiroConfigProperties {
     //系统管理员密码重试次数
     private Integer  userPasswordShowCaptchaRetryCount=3;

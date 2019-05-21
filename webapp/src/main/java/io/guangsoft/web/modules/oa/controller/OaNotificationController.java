@@ -13,7 +13,7 @@ import io.guangsoft.web.modules.oa.entity.OaNotification;
  * @date 2017-06-10 17:15:17
  */
 @Controller
-@RequestMapping("${jeeweb.admin.url.prefix}/oa/oanotification")
+@RequestMapping("${cms.admin.url.prefix}/oa/oanotification")
 @ViewPrefix("modules/oa/oanotification")
 @RequiresPathPermission("oa:oanotification")
 public class OaNotificationController extends BaseCRUDController<OaNotification, String> {

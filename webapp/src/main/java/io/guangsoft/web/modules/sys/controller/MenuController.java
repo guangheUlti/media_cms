@@ -34,7 +34,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/menu")
+@RequestMapping("${cms.admin.url.prefix}/sys/menu")
 @ViewPrefix("modules/sys/menu")
 @RequiresPathPermission("sys:menu")
 @Log(title = "菜单管理")

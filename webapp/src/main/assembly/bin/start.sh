@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER_NAME='jeeweb-admin'
+SERVER_NAME='cms-admin'
 JAR_NAME="$SERVER_NAME.jar"
 cd `dirname $0`
 BIN_DIR=`pwd`

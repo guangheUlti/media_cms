@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2017-02-08 22:27:30
  */
 @Controller
-@RequestMapping("${jeeweb.admin.url.prefix}/common")
+@RequestMapping("${cms.admin.url.prefix}/common")
 @ViewPrefix("modules/common")
 public class CommonController extends BaseController {
 

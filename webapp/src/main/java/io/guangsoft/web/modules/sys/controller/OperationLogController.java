@@ -33,7 +33,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/operation/log")
+@RequestMapping("${cms.admin.url.prefix}/sys/operation/log")
 @ViewPrefix("modules/sys/log")
 @RequiresPathPermission("sys:operation:log")
 @Log(title = "操作日志")

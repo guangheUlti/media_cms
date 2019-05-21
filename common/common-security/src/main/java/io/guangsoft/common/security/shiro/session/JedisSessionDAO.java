@@ -41,9 +41,9 @@ public class JedisSessionDAO extends AbstractSessionDAO implements SessionDAO {
 		 * if (request != null) { String uri = request.getServletPath(); //
 		 * 如果是静态文件，则不更新SESSION if (ServletUtils.isStaticFile(uri)) { return; }
 		 * // 如果是视图文件，则不更新SESSION if (StringUtils.startsWith(uri,
-		 * JeewebPropertiesUtil.getConfig("web.view.prefix")) &&
+		 * cmsPropertiesUtil.getConfig("web.view.prefix")) &&
 		 * StringUtils.endsWith(uri,
-		 * JeewebPropertiesUtil.getConfig("web.view.suffix"))) { return; } //
+		 * cmsPropertiesUtil.getConfig("web.view.suffix"))) { return; } //
 		 * 手动控制不更新SESSION if
 		 * (Boolean.FALSE.equals(request.getParameter("updateSession"))) {
 		 * return; } }

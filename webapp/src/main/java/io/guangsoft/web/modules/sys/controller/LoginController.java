@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("${jeeweb.admin.url.prefix}")
+@RequestMapping("${cms.admin.url.prefix}")
 public class LoginController extends BaseController {
 	@Autowired
 	private RetryLimitHashedCredentialsMatcher retryLimitHashedCredentialsMatcher;

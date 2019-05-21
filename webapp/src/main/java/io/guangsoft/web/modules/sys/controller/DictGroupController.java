@@ -4,7 +4,6 @@ import io.guangsoft.web.aspectj.annotation.Log;
 import io.guangsoft.web.aspectj.enums.LogType;
 import io.guangsoft.web.modules.sys.entity.DictGroup;
 import io.guangsoft.web.modules.sys.service.IDictGroupService;
-import io.guangsoft.beetl.tags.dict.DictUtils;
 import io.guangsoft.common.http.PageResponse;
 import io.guangsoft.common.http.Response;
 import io.guangsoft.common.mvc.annotation.ViewPrefix;
@@ -30,7 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/dict/group")
+@RequestMapping("${cms.admin.url.prefix}/sys/dict/group")
 @ViewPrefix("modules/sys/dict/group")
 @RequiresPathPermission("sys:dict")
 @Log(title = "字典分组")
@@ -117,7 +116,6 @@ public class DictGroupController extends BaseBeanController<DictGroup> {
 	@RequiresMethodPermissions("force:refresh")
 	public Response forceRefresh(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			DictUtils.clear();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return Response.error("字典刷新失败" + e.getMessage());

@@ -34,7 +34,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/task/schedule/job")
+@RequestMapping("${cms.admin.url.prefix}/task/schedule/job")
 @ViewPrefix("modules/task/schedule/job")
 @RequiresPathPermission("task:schedule:job")
 @Log(title = "计划任务")

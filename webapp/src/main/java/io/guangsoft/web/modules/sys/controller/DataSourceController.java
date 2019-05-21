@@ -35,7 +35,7 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/datasource")
+@RequestMapping("${cms.admin.url.prefix}/sys/datasource")
 @ViewPrefix("modules/sys/datasource")
 @RequiresPathPermission("sys:datasource")
 public class DataSourceController extends BaseBeanController<DataSource> {

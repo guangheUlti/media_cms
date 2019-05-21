@@ -35,7 +35,7 @@ import java.util.List;
  * @date 2017-05-15 08:18:21
  */
 @Controller
-@RequestMapping(value = "${jeeweb.admin.url.prefix}/sys/online")
+@RequestMapping(value = "${cms.admin.url.prefix}/sys/online")
 @ViewPrefix("modules/sys/online")
 @RequiresPathPermission("sys:online")
 public class UserOnlineController extends BaseController{

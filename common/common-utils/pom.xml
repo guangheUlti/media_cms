@@ -32,8 +32,6 @@
         <itext-asian.version>5.2.0</itext-asian.version>
         <!--easypoi 版本-->
         <easypoi.version>3.2.0</easypoi.version>
-        <!--freemark-->
-        <freemarker.version>2.3.27-incubating</freemarker.version>
     </properties>
     <dependencies>
         <dependency>
@@ -68,12 +66,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
-        </dependency>
-        <!-- freemarker -->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>${freemarker.version}</version>
         </dependency>
         <!-- Ehcache -->
         <dependency>

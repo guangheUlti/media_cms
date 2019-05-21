@@ -37,7 +37,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("${jeeweb.admin.url.prefix}/sys/login/log")
+@RequestMapping("${cms.admin.url.prefix}/sys/login/log")
 @ViewPrefix("modules/sys/log")
 @RequiresPathPermission("sys:login:log")
 public class LoginLogController extends BaseBeanController<LoginLog> {
