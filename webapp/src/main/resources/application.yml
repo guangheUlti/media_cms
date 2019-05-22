@@ -6,7 +6,7 @@ upload-file-path: D:/upload-file
 #spring
 spring:
   resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${upload-file-path}
+    static-locations: classpath:/static/,classpath:/resources/,classpath:/public/,classpath:/META-INF/resources/,file:${upload-file-path}
   session:
      store-type: none
   devtools:
@@ -14,7 +14,7 @@ spring:
       enabled: true        #这里是为了热部署的，与mybatis是无关的
   cache:
     type: redis
-  redis:   #redis 配置
+  redis:   #redis 配置，只有在RedisConfig开启，才生效
         host: 192.168.50.30
         port: 6379
         password:
@@ -102,14 +102,13 @@ mybatis-plus:
 #shiro
 cms:
   shiro:
-     rememeberMeCookieName: cms-rememeberMeCache
-     rememeberMeCookieBase64CipherKey: KU471rVNQ6k7PQL4SqxgJg==
-     filter-chain-definitions: /static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
+    sessionIdCookieName: sessionId
+    #无论是驼峰还剩这种方式，都会被识别成驼峰标识的JavaBean属性
+    filter-chain-definitions: /static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
   admin:
-     url:
-       prefix: /cms
-       suffix: .html
-
+    url:
+      prefix: /cms
+      suffix: .html
 #定时任务配置
 quartz:
   open-cluster: false # 是否开启集群

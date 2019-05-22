@@ -100,7 +100,7 @@ mybatis-plus:
 #shiro
 cms:
   shiro:
-     rememeberMeCookieName: cms-rememeberMeCache
+     rememeberMeCookieName: rememeberMeCache
      rememeberMeCookieBase64CipherKey: KU471rVNQ6k7PQL4SqxgJg==
      filter-chain-definitions: /static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
   admin:

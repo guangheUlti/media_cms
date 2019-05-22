@@ -2,8 +2,6 @@ package io.guangsoft.web.config.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-/**
- */
 @ConfigurationProperties(prefix = "cms.shiro")
 public class ShiroConfigProperties {
     //系统管理员密码重试次数
@@ -12,7 +10,6 @@ public class ShiroConfigProperties {
     private  String credentialsHashAlgorithmName="md5";
     //生成Hash值的迭代次数
     private Integer credentialsHashIterations=2;
-
     //表示是否存储散列后的密码为16进制，需要和生成密码时的一样
     private Boolean credentialsStoredCredentialsHexEncoded=Boolean.TRUE;
     //全局session超时时间 1000*30*60milliseconds = 30 分钟（1800000）
@@ -20,9 +17,9 @@ public class ShiroConfigProperties {
     //session验证时间间隔(即验证会话是否还有效) 1000*60*60milliseconds = 1小时（3600000）
     private Integer sessionValidationInterval=3600000;
     //session 缓存的名字
-    private String activeSessionCacheName="shiro-activeSessionCache";
+    private String activeSessionCacheName="activeSessionCache";
     //CookieName
-    private String sessionIdCookieName="shiro-sessionId";
+    private String sessionIdCookieName="sessionId";
     //CookieName
     private String sessionIdCookieDomain="";
     private String sessionIdCookiePath="/";
@@ -30,11 +27,11 @@ public class ShiroConfigProperties {
     //默认uid cookie 浏览器关闭后销毁
     private Integer sessionIdCookieMaxAge=-1;
     //rememeber me cookie 名字
-    private String rememeberMeCookieName="shiro-rememeberMeCache";
+    private String rememeberMeCookieName="rememeberMe";
     private String rememeberMeCookieDomain="";
     private String rememeberMeCookiePath="/";
     private Boolean rememeberMeCookieHttpOnly=Boolean.TRUE;
-   //默认 rememberMe cookie 60 * 60 * 24 * 30 （30天）
+    //默认 rememberMe cookie 60 * 60 * 24 * 30 （30天）
     private Integer rememeberMeCookieMaxAge=2592000;
     //cipherKey
     private String rememeberMeCookieBase64CipherKey="KU471rVNQ6k7PQL4SqxgJg==";
@@ -52,11 +49,11 @@ public class ShiroConfigProperties {
     private String userForceLogoutUrl="/admin/login?forcelogout=1";
     //没有授权地址
     private String unauthorizedUrl="/unauthorized";
-   //默认的登录成功页
+    //默认的登录成功页
     private String  defaultSuccessUrl="/admin";
-   //验证码是否开启
-   private Boolean jcaptchaEnable=Boolean.TRUE;
-     //验证码错误时重定向的地址
+    //验证码是否开启
+    private Boolean jcaptchaEnable=Boolean.TRUE;
+    //验证码错误时重定向的地址
     private String jcaptchaErrorUrl="/admin/login?jcaptchaError=1";
 
     //权限

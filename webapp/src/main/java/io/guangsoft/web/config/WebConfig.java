@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.converter.HttpMessageConverter;
 
-/**
- */
-
 @ControllerAdvice
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

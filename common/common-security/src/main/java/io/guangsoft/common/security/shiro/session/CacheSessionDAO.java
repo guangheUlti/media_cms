@@ -1,9 +1,9 @@
 package io.guangsoft.common.security.shiro.session;
 
+import com.google.common.collect.Sets;
 import io.guangsoft.common.utils.DateUtils;
 import io.guangsoft.common.utils.ServletUtils;
 import io.guangsoft.common.utils.StringUtils;
-import com.google.common.collect.Sets;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.UnknownSessionException;
 import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Set;
 
 /**

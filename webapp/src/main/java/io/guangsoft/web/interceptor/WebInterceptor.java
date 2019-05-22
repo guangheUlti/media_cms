@@ -14,12 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-
 /**
  * 公共拦截器
- * Created by 王存见 on 2017/08/17.
  */
-
 public class WebInterceptor extends HandlerInterceptorAdapter {
 
     private static Logger logger = LoggerFactory.getLogger(WebInterceptor.class);
