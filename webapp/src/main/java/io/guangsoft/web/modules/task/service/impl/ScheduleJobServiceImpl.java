@@ -17,9 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * @date 2017-05-09 23:22:51
- */
 @Transactional
 @Service("scheduleJobService")
 public class ScheduleJobServiceImpl extends CommonServiceImpl<ScheduleJobMapper, ScheduleJob>

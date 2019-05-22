@@ -16,7 +16,6 @@ import com.baomidou.mybatisplus.plugins.PerformanceInterceptor;
 /**
  */
 @Configuration
-@MapperScan("com.baomidou.springboot.mapper*")
 public class MybatisPlusConfig {
 
     /**

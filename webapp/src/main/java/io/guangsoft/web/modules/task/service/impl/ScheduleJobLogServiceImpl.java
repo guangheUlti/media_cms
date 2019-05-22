@@ -11,9 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-
-/**
-*/
 @Transactional
 @Service("schedulejoblogService")
 public class ScheduleJobLogServiceImpl
@@ -22,10 +19,10 @@ public class ScheduleJobLogServiceImpl
 
     @Override
     public void onStart(ScheduleJob scheduleJob) {
-        ScheduleJobLog scheduleJobLog = newJobLog(scheduleJob);
-        scheduleJobLog.setJobMessage(scheduleJob.getJobName() + "运行开始!");
-        scheduleJobLog.setStatus(ScheduleJobLog.SCHEDULE_JOB_LOG_RUN_NOMAL);
-        insert(scheduleJobLog);
+        //ScheduleJobLog scheduleJobLog = newJobLog(scheduleJob);
+        //scheduleJobLog.setJobMessage(scheduleJob.getJobName() + "运行开始!");
+        //scheduleJobLog.setStatus(ScheduleJobLog.SCHEDULE_JOB_LOG_RUN_NOMAL);
+        //insert(scheduleJobLog);
     }
 
     @Override

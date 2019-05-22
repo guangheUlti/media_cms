@@ -37,6 +37,7 @@ public class QuartzConfig implements ApplicationRunner {
             Map<String, QuartzInitCallback> quartzInitCallbackBeans = SpringContextHolder.getApplicationContext().getBeansOfType(QuartzInitCallback.class);
             for (QuartzInitCallback quartzInitCallback : quartzInitCallbackBeans.values()) {
                 try {
+                    //开启定时任务
                     quartzInitCallback.initSchedule();
                 } catch (Exception e) {
                     e.printStackTrace();
