@@ -3,11 +3,9 @@ package io.guangsoft.common.disruptor;
 import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.IgnoreExceptionHandler;
 import com.lmax.disruptor.RingBuffer;
-import com.lmax.disruptor.YieldingWaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
-import org.springframework.boot.autoconfigure.mail.MailProperties;
-import org.springframework.mail.javamail.JavaMailSender;
+
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;

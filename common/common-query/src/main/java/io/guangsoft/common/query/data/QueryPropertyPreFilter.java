@@ -8,11 +8,6 @@ import java.lang.reflect.Field;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @param <T>
- *             http://www.cnblogs.com/sandyfog/articles/3679804.html
- *             http://www.cnblogs.com/dirgo/p/5178629.html Filter DEMO
- */
 public class QueryPropertyPreFilter implements PropertyPreFilterable {
 	private String queryPropertyStr;
 	private Set<String> queryPropertys;

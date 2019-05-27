@@ -14,10 +14,8 @@
         <hibernate.validator.version>5.1.1.Final</hibernate.validator.version>
         <!--日志记录-->
         <jboss-logging.version>3.3.1.Final</jboss-logging.version>
-        <!--数据库连接-->
-        <druid.version>1.0.14</druid.version>
         <!-- mysql -->
-        <mysql.version>8.0.11</mysql.version>
+        <mysql.version>5.1.46</mysql.version>
         <!-- 并发框架Disruptor -->
         <disruptor.version>3.3.6</disruptor.version>
     </properties>
@@ -57,20 +55,4 @@
             <version>${disruptor.version}</version>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <!-- 编码和编译和JDK版本 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

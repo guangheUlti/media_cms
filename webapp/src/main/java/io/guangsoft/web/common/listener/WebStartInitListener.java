@@ -6,11 +6,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import io.guangsoft.common.utils.MessageUtils;
 import org.springframework.stereotype.Component;
 
-/**
- * http://blog.csdn.net/fcly2013/article/details/19984061 启动说明
- * http://blog.csdn.net/ma546659141/article/details/45958123 启动加载顺序
- * http://www.cnblogs.com/shijiaoyun/p/4933551.html 当前使用的
- */
 @Component
 public class WebStartInitListener implements ApplicationListener<ContextRefreshedEvent> {
 

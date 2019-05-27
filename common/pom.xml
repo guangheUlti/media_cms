@@ -15,6 +15,10 @@
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+    <properties>
+        <!--数据库连接池-->
+        <druid.version>1.0.14</druid.version>
+    </properties>
     <!--子项目-->
     <modules>
         <module>common-utils</module>
@@ -24,20 +28,4 @@
         <module>common-crm</module>
         <module>common-quartz</module>
     </modules>
-    <build>
-        <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <!-- 编码和编译和JDK版本 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

@@ -26,23 +26,6 @@
             <artifactId>common-quartz</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <!--poi Excel开始-->
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-base</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-web</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.afterturn</groupId>
-            <artifactId>easypoi-annotation</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <!--poi Excel结束-->
         <!-- 解析客户端操作系统、浏览器等 -->
         <dependency>
             <groupId>eu.bitwalker</groupId>
@@ -59,6 +42,7 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
+            <!--打包为可运行的jar-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -75,18 +59,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- 编码和编译和JDK版本 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <!--打包插件-->
+            <!--assemble打包插件-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
