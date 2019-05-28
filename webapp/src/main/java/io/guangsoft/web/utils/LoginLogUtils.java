@@ -12,8 +12,6 @@ import eu.bitwalker.useragentutils.UserAgent;
 
 import java.util.Date;
 
-/**
- */
 public class LoginLogUtils {
 
     /**
@@ -33,50 +31,48 @@ public class LoginLogUtils {
 
     /**
      * 记录登陆成功日志
+     *
      * @param username 用户名
-     * @param message 消息
+     * @param message  消息
      */
-    public static void recordSuccessLoginLog(String username,String message)
-    {
-       recordLoginLog(username,LoginLogUtils.LOGIN_SUCCESS,message);
+    public static void recordSuccessLoginLog(String username, String message) {
+        recordLoginLog(username, LoginLogUtils.LOGIN_SUCCESS, message);
     }
 
     /**
      * 记录登陆日志
+     *
      * @param username 用户名
-     * @param message 消息
+     * @param message  消息
      */
-    public static void recordFailLoginLog(String username,String message)
-    {
-        recordLoginLog(username,LoginLogUtils.LOGIN_FAIL,message);
+    public static void recordFailLoginLog(String username, String message) {
+        recordLoginLog(username, LoginLogUtils.LOGIN_FAIL, message);
     }
 
     /**
-     *  记录退出日志
+     * 记录退出日志
+     *
      * @param username 用户名
-     * @param message 消息
+     * @param message  消息
      */
-    public static void recordLogoutLoginLog(String username,String message)
-    {
-        recordLoginLog(username,LoginLogUtils.LOGOUT,message);
+    public static void recordLogoutLoginLog(String username, String message) {
+        recordLoginLog(username, LoginLogUtils.LOGOUT, message);
     }
 
     /**
      * 记录登陆日志
+     *
      * @param username 用户名
-     * @param status 状态
-     * @param message 消息
+     * @param status   状态
+     * @param message  消息
      */
-    public static void recordLoginLog(String username,String status,String message)
-    {
+    public static void recordLoginLog(String username, String status, String message) {
         final UserAgent userAgent = UserAgent.parseUserAgentString(ServletUtils.getRequest().getHeader("User-Agent"));
         final String ip = IpUtils.getIpAddr(ServletUtils.getRequest());
         //创建异步任务
-        Task task  = new Task()
-        {
+        Task task = new Task() {
             @Override
-            public void run()
-            {
+            public void run() {
                 // 获取客户端操作系统
                 String os = userAgent.getOperatingSystem().getName();
                 // 获取客户端浏览器

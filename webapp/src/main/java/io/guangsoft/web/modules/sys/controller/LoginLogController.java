@@ -32,10 +32,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-
-/**
- */
-
 @RestController
 @RequestMapping("${cms.admin.url.prefix}/sys/login/log")
 @ViewPrefix("modules/sys/log")
@@ -44,7 +40,6 @@ public class LoginLogController extends BaseBeanController<LoginLog> {
 
     @Autowired
     private ILoginLogService loginLogService;
-
 
     @GetMapping
     @RequiresMethodPermissions("view")

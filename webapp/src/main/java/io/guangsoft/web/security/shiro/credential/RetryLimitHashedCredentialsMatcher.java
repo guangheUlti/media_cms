@@ -13,8 +13,7 @@ import io.guangsoft.web.security.shiro.filter.authc.UsernamePasswordToken;
 import io.guangsoft.web.security.shiro.filter.jcaptcha.JCaptchaValidateFilter;
 
 import java.util.concurrent.atomic.AtomicInteger;
-/**
- */
+
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {
 
 	private Cache<String, AtomicInteger> passwordRetryCache;
@@ -80,9 +79,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 
 	/**
 	 * 是否显示验证码登录
-	 * @param useruame
-	 *            用户名
-	 * @return
+	 * @param useruame 用户名
 	 */
 	public boolean isShowCaptcha(String useruame) {
 		// 判断是否提交验证码

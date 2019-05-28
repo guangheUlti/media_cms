@@ -4,11 +4,6 @@
  */
 package io.guangsoft.web.security.shiro;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-3-22 上午7:44
- * <p>Version: 1.0
- */
 public interface ShiroConstants {
     /**
      * 当前在线会话

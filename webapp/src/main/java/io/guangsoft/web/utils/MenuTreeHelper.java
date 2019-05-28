@@ -9,9 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- */
-
-/**
  * 树排序
  */
 public class MenuTreeHelper<ID extends Serializable> implements Serializable {
@@ -41,6 +38,7 @@ public class MenuTreeHelper<ID extends Serializable> implements Serializable {
 
     /**
      * 解析根节点
+     *
      * @param node
      */
     public void parseSubNode(MenuNode node) {
@@ -54,9 +52,9 @@ public class MenuTreeHelper<ID extends Serializable> implements Serializable {
                 menuNodes.add(menuNode);
                 parseSubNode(menuNode);
                 node.setChildrenNode(menuNodes);
-                if (menuNodes.size()>0){
+                if (menuNodes.size() > 0) {
                     node.setHasChildren(Boolean.TRUE);
-                }else{
+                } else {
                     node.setHasChildren(Boolean.FALSE);
                 }
             }
@@ -78,15 +76,15 @@ public class MenuTreeHelper<ID extends Serializable> implements Serializable {
         return rootNodes;
     }
 
-    private MenuNode menuToNode(Menu menu){
+    private MenuNode menuToNode(Menu menu) {
         String menuStr = JSON.toJSONString(menu);
-        MenuNode menuNode =JSON.parseObject(menuStr, MenuNode.class);
+        MenuNode menuNode = JSON.parseObject(menuStr, MenuNode.class);
         return menuNode;
     }
 
-    public static class MenuNode extends Menu{
+    public static class MenuNode extends Menu {
 
-        private List<MenuNode> childrenNode=new ArrayList<>();
+        private List<MenuNode> childrenNode = new ArrayList<>();
 
         public List<MenuNode> getChildrenNode() {
             return childrenNode;

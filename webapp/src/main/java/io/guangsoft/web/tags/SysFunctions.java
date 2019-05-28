@@ -3,8 +3,6 @@ package io.guangsoft.web.tags;
 import io.guangsoft.common.utils.SpringContextHolder;
 import org.springframework.core.env.Environment;
 
-/**
- */
 public class SysFunctions {
 
 	/**

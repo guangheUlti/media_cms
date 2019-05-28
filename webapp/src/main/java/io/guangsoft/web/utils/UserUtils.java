@@ -23,8 +23,6 @@ import org.apache.shiro.subject.Subject;
 import java.util.List;
 import java.util.Set;
 
-/**
- */
 public class UserUtils {
 
 	private static IUserService userService = SpringContextHolder.getBean(IUserService.class);

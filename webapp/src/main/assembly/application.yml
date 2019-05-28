@@ -1,12 +1,11 @@
 server:
     port: 8080
 
-upload-file-path: D:/upload-file
+#路径最后边的/一定不能省略
+upload-file-path: D:/upload-file/
 
 #spring
 spring:
-  resources:
-    static-locations: classpath:/static/,classpath:/resources/,classpath:/public/,classpath:/META-INF/resources/,file:${upload-file-path}
   session:
      store-type: none
   devtools:
@@ -21,6 +20,10 @@ spring:
   thymeleaf: #关闭默认模板引擎
     cache: false
     enabled: false
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
   aop:  #使用CGLIB来实现AOP的时候
      proxy-target-class: true
 
@@ -88,7 +91,7 @@ cms:
   shiro:
     sessionIdCookieName: sessionId
     #无论是驼峰还剩这种方式，都会被识别成驼峰标识的JavaBean属性
-    filter-chain-definitions: /static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
+    filter-chain-definitions: /static/**=anon;/upload/**=anon;/jcaptcha*=anon;/login=jCaptchaValidate,authc;/logout=logout;/**=user,sysUser,onlineSession,perms,roles
   admin:
     url:
       prefix: /cms

@@ -54,21 +54,6 @@ public class ShiroConfig {
         return sessionDAO;
     }
 
-    /* redis 的配置
-    @Bean
-    public RedisCacheManager shiroCacheManager(RedisTemplate<Object, Object> redisTemplate) {
-        //初始化RedisCacheManager
-        RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);
-        return cacheManager;
-    }
-
-    @Bean
-    public RedisSessionDAO sessionDAO(JavaUuidSessionIdGenerator sessionIdGenerator,RedisTemplate<Object, Object> redisTemplate){
-        RedisSessionDAO sessionDAO=new RedisSessionDAO(redisTemplate);
-        sessionDAO.setSessionIdGenerator(sessionIdGenerator);
-        return sessionDAO;
-    }
-    */
     @Bean
     public RetryLimitHashedCredentialsMatcher credentialsMatcher(CacheManager shiroCacheManager) {
         RetryLimitHashedCredentialsMatcher RetryLimitHashedCredentialsMatcher = new RetryLimitHashedCredentialsMatcher(shiroCacheManager);
@@ -97,8 +82,6 @@ public class ShiroConfig {
 
     /**
      * session的cookie
-     *
-     * @return
      */
     public SimpleCookie sessionIdCookie() {
         SimpleCookie simpleCookie = new SimpleCookie(shiroConfigProperties.getSessionIdCookieName());
@@ -112,8 +95,6 @@ public class ShiroConfig {
 
     /**
      * 记住我的cookie
-     *
-     * @return
      */
     public SimpleCookie rememberMeCookie() {
         SimpleCookie simpleCookie = new SimpleCookie(shiroConfigProperties.getRememeberMeCookieName());
@@ -123,7 +104,6 @@ public class ShiroConfig {
         simpleCookie.setMaxAge(shiroConfigProperties.getRememeberMeCookieMaxAge());
         return simpleCookie;
     }
-
 
     @Bean
     public OnlineSessionFactory onlineSessionFactory() {
@@ -157,8 +137,6 @@ public class ShiroConfig {
 
     /**
      * 会话验证调度
-     *
-     * @return
      */
     @Bean
     public ExecutorServiceSessionValidationScheduler sessionValidationScheduler(SessionManager sessionManager) {
@@ -167,7 +145,6 @@ public class ShiroConfig {
         sessionValidationScheduler.setSessionManager(sessionManager);
         return sessionValidationScheduler;
     }
-
 
     @Bean
     public DefaultWebSecurityManager securityManager(SessionManager sessionManager, UserRealm userRealm, CookieRememberMeManager rememberMeManager) {
@@ -180,8 +157,6 @@ public class ShiroConfig {
 
     /**
      * 替换默认的form 验证过滤器
-     *
-     * @return
      */
     private FormAuthenticationFilter formAuthenticationFilter() {
         FormAuthenticationFilter formAuthenticationFilter = new FormAuthenticationFilter();
@@ -194,8 +169,6 @@ public class ShiroConfig {
 
     /**
      * 退出登录过滤器
-     *
-     * @return
      */
     private LogoutFilter logoutFilter() {
         LogoutFilter logoutFilter = new LogoutFilter();
@@ -203,11 +176,8 @@ public class ShiroConfig {
         return logoutFilter;
     }
 
-
     /**
      * 提取系统用户（User） 验证用户是否合法的过滤器（如是否删除了 是否锁定了）
-     *
-     * @return
      */
     private SysUserFilter sysUserFilter() {
         SysUserFilter sysUserFilter = new SysUserFilter();
@@ -219,8 +189,6 @@ public class ShiroConfig {
 
     /**
      * 提取系统用户（User） 验证用户是否合法的过滤器（如是否删除了 是否锁定了）
-     *
-     * @return
      */
     private OnlineSessionFilter onlineSessionFilter(SessionDAO sessionDAO) {
         OnlineSessionFilter onlineSessionFilter = new OnlineSessionFilter();
@@ -231,8 +199,6 @@ public class ShiroConfig {
 
     /**
      * 验证码
-     *
-     * @return
      */
     @Bean
     public JCaptchaValidateFilter jCaptchaValidateFilter(SessionDAO sessionDAO) {
@@ -262,9 +228,6 @@ public class ShiroConfig {
     /**
      * 开启shiro aop注解支持.
      * 使用代理方式;所以需要开启代码支持;
-     *
-     * @param securityManager
-     * @return
      */
     @Bean
     public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(SecurityManager securityManager) {

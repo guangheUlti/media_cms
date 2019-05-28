@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -25,33 +26,33 @@ public class WebInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //加入公用参数的
         String ctx = request.getServletContext().getContextPath();
-        request.setAttribute("ctx",ctx);
-        request.setAttribute("adminPath",ctx + "/admin");
-        request.setAttribute("staticPath",ctx + "/static");
+        request.setAttribute("ctx", ctx);
+        request.setAttribute("adminPath", ctx + "/admin");
+        request.setAttribute("staticPath", ctx + "/static");
         request.setAttribute("platformName", MessageUtils.getMessage("platform.name"));
         request.setAttribute("platformCopyright", MessageUtils.getMessage("platform.copyright"));
         request.setAttribute("platformVersion", MessageUtils.getMessage("platform.version"));
         UserRealm.Principal principal = UserUtils.getPrincipal(); // 如果已经登录，则跳转到管理首页
-        if (principal!=null){
+        if (principal != null) {
             try {
                 Menu currentMenu = UserUtils.getCurrentMenu();
-                if (currentMenu == null){
+                if (currentMenu == null) {
                     currentMenu = new Menu();
                 }
                 String pmenuids = currentMenu.getParentIds();
-                request.setAttribute("currentMenu",currentMenu);
+                request.setAttribute("currentMenu", currentMenu);
                 if (!StringUtils.isEmpty(pmenuids)) {
-                    request.setAttribute("pmenuids",pmenuids);
-                }else{
-                    request.setAttribute("pmenuids","");
+                    request.setAttribute("pmenuids", pmenuids);
+                } else {
+                    request.setAttribute("pmenuids", "");
                 }
                 List<MenuTreeHelper.MenuNode> menuNodes = MenuTreeHelper.create().sort(UserUtils.getMenuList());
                 request.setAttribute("menus", menuNodes);
-            }catch (Exception e){
+            } catch (Exception e) {
 
             }
         }
-        request.setAttribute("loginUser",UserUtils.getUser());
+        request.setAttribute("loginUser", UserUtils.getUser());
         return true;
     }
 

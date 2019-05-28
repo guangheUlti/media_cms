@@ -20,9 +20,6 @@ import io.guangsoft.web.utils.UserUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * http://blog.csdn.net/babys/article/details/50151407
- */
 public class UserRealm extends AuthorizingRealm {
 
 	@Autowired
@@ -60,7 +57,7 @@ public class UserRealm extends AuthorizingRealm {
 		if (User.STATUS_LOCKED.equals(user.getStatus())) {
 			throw new LockedAccountException(); // 帐号锁定
 		}
-		// 交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
+		//交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
 		SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
 				new Principal(user, authcToken.isMobileLogin()), // 用户名
 				user.getPassword(), // 密码

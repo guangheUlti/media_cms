@@ -10,17 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @date 2017-02-08 22:27:30
- */
 @Controller
 @RequestMapping("${cms.admin.url.prefix}/common")
 @ViewPrefix("modules/common")
 public class CommonController extends BaseController {
-
 	/**
 	 * 图表资源
-	 * @return
 	 */
 	@RequestMapping(value = "icons", method = RequestMethod.GET)
 	public String list(Model model) {
