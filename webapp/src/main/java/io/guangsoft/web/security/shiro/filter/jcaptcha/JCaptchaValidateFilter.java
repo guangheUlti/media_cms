@@ -15,22 +15,14 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-/**
- * 验证码验证
- * @date 2017-02-23
- */
 public class JCaptchaValidateFilter extends AccessControlFilter {
 
-	private boolean jcaptchaEbabled = true;
+	private boolean jcaptchaEbabled = false;
 
 	private String jcaptchaParam = "jcaptchaCode";
 
 	private String jcapatchaErrorUrl;
 
-	/**
-	 * 是否开启jcaptcha
-	 * @param jcaptchaEbabled
-	 */
 	public void setJcaptchaEbabled(boolean jcaptchaEbabled) {
 		this.jcaptchaEbabled = jcaptchaEbabled;
 	}
@@ -75,7 +67,7 @@ public class JCaptchaValidateFilter extends AccessControlFilter {
 			return true;
 		}
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-		// 验证码禁用 或不是表单提交 允许访问
+		//验证码禁用 或不是表单提交 允许访问
 		if (jcaptchaEbabled == false || !"post".equals(httpServletRequest.getMethod().toLowerCase())) {
 			return true;
 		}

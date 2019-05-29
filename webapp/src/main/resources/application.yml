@@ -27,7 +27,6 @@ spring:
   aop:  #使用CGLIB来实现AOP的时候
      proxy-target-class: true
 
-  #DATABASE CONFIG
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
@@ -91,11 +90,11 @@ cms:
   shiro:
     sessionIdCookieName: sessionId
     #无论是驼峰还剩这种方式，都会被识别成驼峰标识的JavaBean属性
-    filter-chain-definitions: /static/**=anon;/upload/**=anon;/jcaptcha*=anon;/login=jCaptchaValidate,authc;/logout=logout;/**=user,sysUser,onlineSession,perms,roles
+    filter-chain-definitions: /static/**=anon;/upload/**=anon;/index=anon;/login/login=jCaptchaValidate,authc;/login/**=anon;/jcaptcha*=anon;/logout=logout;/**=user,sysUser,onlineSession,perms,roles
   admin:
     url:
       prefix: /cms
-      suffix: .html
+
 #定时任务配置
 quartz:
   open-cluster: false # 是否开启集群

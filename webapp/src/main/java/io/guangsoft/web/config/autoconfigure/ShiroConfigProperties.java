@@ -50,7 +50,7 @@ public class ShiroConfigProperties {
     //没有授权地址
     private String unauthorizedUrl = "/unauthorized";
     //默认的登录成功页
-    private String defaultSuccessUrl = "/cms";
+    private String defaultSuccessUrl = "/index";
     //验证码是否开启
     private Boolean jcaptchaEnable = Boolean.TRUE;
     //验证码错误时重定向的地址

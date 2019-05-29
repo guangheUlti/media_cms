@@ -216,11 +216,11 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setLoginUrl(shiroConfigProperties.getLoginUrl());
         shiroFilterFactoryBean.setUnauthorizedUrl(shiroConfigProperties.getUnauthorizedUrl());
         Map<String, Filter> filters = shiroFilterFactoryBean.getFilters();
+        filters.put("jCaptchaValidate", jCaptchaValidateFilter(sessionDAO));
         filters.put("authc", formAuthenticationFilter());
-        filters.put("sysUser", sysUserFilter());
         filters.put("logout", logoutFilter());
         filters.put("onlineSession", onlineSessionFilter(sessionDAO));
-        filters.put("jCaptchaValidate", jCaptchaValidateFilter(sessionDAO));
+        filters.put("sysUser", sysUserFilter());
         shiroFilterFactoryBean.setFilterChainDefinitionsStr(shiroConfigProperties.getFilterChainDefinitions());
         return shiroFilterFactoryBean;
     }

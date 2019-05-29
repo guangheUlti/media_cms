@@ -1,7 +1,5 @@
 package io.guangsoft.web.security.shiro.filter.authc;
 
-/**
- */
 public class UsernamePasswordToken extends org.apache.shiro.authc.UsernamePasswordToken {
 
 	private static final long serialVersionUID = 1L;
