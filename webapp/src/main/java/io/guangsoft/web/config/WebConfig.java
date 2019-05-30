@@ -61,11 +61,11 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //编码拦截器
-        registry.addInterceptor(encodingInterceptor()).addPathPatterns("/**").excludePathPatterns("/upload/**", "/static/**");
+        registry.addInterceptor(encodingInterceptor()).addPathPatterns("/**").excludePathPatterns("/files/**", "/static/**");
         //安全验证拦截器
-        registry.addInterceptor(permissionInterceptorAdapter()).addPathPatterns("/**").excludePathPatterns("/upload/**", "/static/**");
+        registry.addInterceptor(permissionInterceptorAdapter()).addPathPatterns("/**").excludePathPatterns("/files/**", "/static/**");
         //web拦截器
-        registry.addInterceptor(webInterceptor()).addPathPatterns("/**").excludePathPatterns("/upload/**", "/static/**");
+        registry.addInterceptor(webInterceptor()).addPathPatterns("/**").excludePathPatterns("/files/**", "/static/**");
     }
 
     @Override
@@ -92,8 +92,8 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
         //添加对上传文件的直接访问
         Environment env = SpringContextHolder.getBean(Environment.class);
-        String uploadFilePath = env.getProperty("upload-file-path");
-        registry.addResourceHandler("/upload/**").addResourceLocations("file:" + uploadFilePath);
+        String filePath = env.getProperty("file-path");
+        registry.addResourceHandler("/files/**").addResourceLocations("file:" + filePath);
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }

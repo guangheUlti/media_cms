@@ -1,29 +1,18 @@
 server:
     port: 8080
 
-upload-file-path:D:/upload-file
+#路径最后边的/一定不能省略
+file-path: D:/files/
 
 #spring
 spring:
-  resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${upload-file-path}
   session:
      store-type: none
   devtools:
     restart:
       enabled: true        #这里是为了热部署的，与mybatis是无关的
-  cache:
-    type: redis
-  redis:   #redis 配置
-        host: 192.168.50.30
-        port: 6379
-        password:
-        jedis:
-          pool:
-            max-active: 8
-            max-idle: 8
-            min-idle: 0
-            max-wait: 10000s
+  messages: #国际化
+      basename: i18n/messages,i18n/ValidationMessages
   mvc: # 捕获404
       throw-exception-if-no-handler-found: true
   resources:
@@ -31,10 +20,13 @@ spring:
   thymeleaf: #关闭默认模板引擎
     cache: false
     enabled: false
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
   aop:  #使用CGLIB来实现AOP的时候
      proxy-target-class: true
 
-  #DATABASE CONFIG
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
@@ -93,20 +85,15 @@ mybatis-plus:
   configuration-properties:
     dbType: mysql #设置全局属性用于控制数据库的类型
 
-#logging
-#logging:
-  #level: warn
-
 #shiro
 cms:
   shiro:
-     rememeberMeCookieName: rememeberMeCache
-     rememeberMeCookieBase64CipherKey: KU471rVNQ6k7PQL4SqxgJg==
-     filter-chain-definitions: /static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
+    sessionIdCookieName: sessionId
+    #无论是驼峰还剩这种方式，都会被识别成驼峰标识的JavaBean属性
+    filter-chain-definitions: /static/**=anon;/files/**=anon;/index=anon;/login/login=jCaptchaValidate,authc;/login/**=anon;/jcaptcha*=anon;/logout=logout;/**=user,sysUser,onlineSession,perms,roles
   admin:
-     url:
-       prefix: /cms
-       suffix: .html
+    url:
+      prefix: /cms
 
 #定时任务配置
 quartz:

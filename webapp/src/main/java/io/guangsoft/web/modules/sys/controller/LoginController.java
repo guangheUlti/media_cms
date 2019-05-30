@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -51,19 +50,27 @@ public class LoginController extends BaseController {
         return result;
     }
 
+    /**
+     * 手动注销
+     */
+    @ResponseBody
     @RequestMapping("/logout")
-    public ModelAndView logout() {
+    public JSONObject logout() {
+        JSONObject result = new JSONObject();
+        result.put("code", 0);
+        result.put("msg", "注销成功！");
         try {
             Subject subject = SecurityUtils.getSubject();
             if (subject != null && subject.isAuthenticated()) {
                 LoginLogUtils.recordLogoutLoginLog(UserUtils.getUser().getUsername(), "退出成功");
                 subject.logout();
             }
-            return new ModelAndView("modules/sys/login/login");
         } catch (Exception e) {
             e.printStackTrace();
+            result.put("code", -1);
+            result.put("mag", e.getMessage());
         }
-        return new ModelAndView("modules/sys/login/index");
+        return result;
     }
 
 }

@@ -1,7 +1,5 @@
 package io.guangsoft.web.common.constant;
 
-/**
- */
 public interface DataBaseFieldConstant {
 	 
 	/**

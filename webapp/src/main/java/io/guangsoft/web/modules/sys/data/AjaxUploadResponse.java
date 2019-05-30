@@ -5,8 +5,6 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
-/**
- */
 public class AjaxUploadResponse {
 
 	private List<FileMeta> files = Lists.newArrayList();
