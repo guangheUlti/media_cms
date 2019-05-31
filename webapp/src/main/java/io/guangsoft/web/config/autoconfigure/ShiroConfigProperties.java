@@ -4,8 +4,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "cms.shiro")
 public class ShiroConfigProperties {
-    //系统管理员密码重试次数
-    private Integer userPasswordShowCaptchaRetryCount = 3;
+    //最大尝试次数
+    private Integer maxRetryCount = 3;
+    //第几次时需要使用验证码
+    private Integer showCaptchaRetryCount = 2;
     //凭证匹配器-算法
     private String credentialsHashAlgorithmName = "md5";
     //生成Hash值的迭代次数
@@ -59,12 +61,20 @@ public class ShiroConfigProperties {
     //权限
     private String filterChainDefinitions = "";
 
-    public Integer getUserPasswordShowCaptchaRetryCount() {
-        return userPasswordShowCaptchaRetryCount;
+    public Integer getMaxRetryCount() {
+        return maxRetryCount;
     }
 
-    public void setUserPasswordShowCaptchaRetryCount(Integer userPasswordShowCaptchaRetryCount) {
-        this.userPasswordShowCaptchaRetryCount = userPasswordShowCaptchaRetryCount;
+    public void setMaxRetryCount(Integer maxRetryCount) {
+        this.maxRetryCount = maxRetryCount;
+    }
+
+    public Integer getShowCaptchaRetryCount() {
+        return showCaptchaRetryCount;
+    }
+
+    public void setShowCaptchaRetryCount(Integer showCaptchaRetryCount) {
+        this.showCaptchaRetryCount = showCaptchaRetryCount;
     }
 
     public String getCredentialsHashAlgorithmName() {

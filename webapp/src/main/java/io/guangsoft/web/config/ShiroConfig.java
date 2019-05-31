@@ -57,8 +57,8 @@ public class ShiroConfig {
     @Bean
     public RetryLimitHashedCredentialsMatcher credentialsMatcher(CacheManager shiroCacheManager) {
         RetryLimitHashedCredentialsMatcher RetryLimitHashedCredentialsMatcher = new RetryLimitHashedCredentialsMatcher(shiroCacheManager);
-        RetryLimitHashedCredentialsMatcher.setMaxRetryCount(shiroConfigProperties.getUserPasswordShowCaptchaRetryCount());
-        RetryLimitHashedCredentialsMatcher.setShowCaptchaRetryCount(shiroConfigProperties.getUserPasswordShowCaptchaRetryCount());
+        RetryLimitHashedCredentialsMatcher.setMaxRetryCount(shiroConfigProperties.getMaxRetryCount());
+        RetryLimitHashedCredentialsMatcher.setShowCaptchaRetryCount(shiroConfigProperties.getShowCaptchaRetryCount());
         RetryLimitHashedCredentialsMatcher.setHashAlgorithmName(shiroConfigProperties.getCredentialsHashAlgorithmName());
         RetryLimitHashedCredentialsMatcher.setHashIterations(shiroConfigProperties.getCredentialsHashIterations());
         RetryLimitHashedCredentialsMatcher.setStoredCredentialsHexEncoded(shiroConfigProperties.getCredentialsStoredCredentialsHexEncoded());

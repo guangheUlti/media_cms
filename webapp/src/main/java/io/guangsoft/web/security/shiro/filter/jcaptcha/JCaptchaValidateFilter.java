@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class JCaptchaValidateFilter extends AccessControlFilter {
 
-	private boolean jcaptchaEbabled = false;
+	private boolean jcaptchaEbabled = true;
 
 	private String jcaptchaParam = "jcaptchaCode";
 
@@ -58,8 +58,7 @@ public class JCaptchaValidateFilter extends AccessControlFilter {
 	}
 
 	@Override
-	protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)
-			throws Exception {
+	protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
 		String useruame = WebUtils.getCleanParam(request, FormAuthenticationFilter.DEFAULT_USERNAME_PARAM);
 		RetryLimitHashedCredentialsMatcher retryLimitHashedCredentialsMatcher = SpringContextHolder
 				.getBean(RetryLimitHashedCredentialsMatcher.class);

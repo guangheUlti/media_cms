@@ -50,6 +50,16 @@ public class LoginController extends BaseController {
         return result;
     }
 
+    @ResponseBody
+    @RequestMapping("isShowCaptcha")
+    public JSONObject isShowCaptcha(String username) {
+        JSONObject result = new JSONObject();
+        result.put("code", 0);
+        boolean isShowCaptcha = retryLimitHashedCredentialsMatcher.isShowCaptcha(username);
+        result.put("data", isShowCaptcha);
+        return result;
+    }
+
     /**
      * 手动注销
      */

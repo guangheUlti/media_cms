@@ -17,8 +17,6 @@ import com.octo.captcha.image.gimpy.GimpyFactory;
 
 import java.awt.*;
 
-/**
- */
 @SuppressWarnings("deprecation")
 public class JCaptchaEngine extends ListImageCaptchaEngine {
 	public static final String IMAGE_CAPTCHA_KEY = "imageCaptcha";// ImageCaptcha对象存放在Session中的key

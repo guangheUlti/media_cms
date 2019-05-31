@@ -1,5 +1,9 @@
 package io.guangsoft.web.security.shiro.credential;
 
+import io.guangsoft.common.utils.SpringContextHolder;
+import io.guangsoft.web.security.shiro.exception.RepeatAuthenticationException;
+import io.guangsoft.web.security.shiro.filter.authc.UsernamePasswordToken;
+import io.guangsoft.web.security.shiro.filter.jcaptcha.JCaptchaValidateFilter;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
@@ -7,18 +11,13 @@ import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 
-import io.guangsoft.common.utils.SpringContextHolder;
-import io.guangsoft.web.security.shiro.exception.RepeatAuthenticationException;
-import io.guangsoft.web.security.shiro.filter.authc.UsernamePasswordToken;
-import io.guangsoft.web.security.shiro.filter.jcaptcha.JCaptchaValidateFilter;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {
 
 	private Cache<String, AtomicInteger> passwordRetryCache;
-	private int maxRetryCount = 10;
-	private int showCaptchaRetryCount = 2;
+	private int maxRetryCount;
+	private int showCaptchaRetryCount;
 
 	public void setMaxRetryCount(int maxRetryCount) {
 		this.maxRetryCount = maxRetryCount;
@@ -36,7 +35,6 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 	public boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info) {
 		UsernamePasswordToken authcToken = (UsernamePasswordToken) token;
 		String username = authcToken.getUsername();
-		// retry count + 1
 		AtomicInteger retryCount = passwordRetryCache.get(username);
 		if (retryCount == null) {
 			retryCount = new AtomicInteger(0);
@@ -88,7 +86,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 		if (retryCount == null) {
 			retryCount = new AtomicInteger(0);
 		}
-		if (retryCount.get() >= showCaptchaRetryCount && jCaptchaValidateFilter.isValidateCaptcha()) {
+		if (retryCount.get() >= showCaptchaRetryCount - 1 && jCaptchaValidateFilter.isValidateCaptcha()) {
 			return true;
 		}
 		return false;

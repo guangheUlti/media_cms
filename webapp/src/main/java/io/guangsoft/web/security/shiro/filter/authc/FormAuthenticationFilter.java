@@ -133,6 +133,9 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
         } catch (ExcessiveAttemptsException e) {
             e.printStackTrace();
             msg = "登录失败次数过多！";
+        } catch (RepeatAuthenticationException e) {
+            e.printStackTrace();
+            msg = "验证码错误！";
         }
         request.setAttribute(FormAuthenticationFilter.DEFAULT_MESSAGE_ERROR_PARAM, msg);
         return true;

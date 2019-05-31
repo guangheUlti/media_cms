@@ -2,8 +2,6 @@ package io.guangsoft.common.utils.jcaptcha;
 
 import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 
-/**
- */
 public class EsManageableImageCaptchaService extends DefaultManageableImageCaptchaService {
 
 	public EsManageableImageCaptchaService(com.octo.captcha.service.captchastore.CaptchaStore captchaStore,
