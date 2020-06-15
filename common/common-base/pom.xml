@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <properties>
         <!--后台数据校验框架-->
-        <hibernate.validator.version>5.1.1.Final</hibernate.validator.version>
+        <hibernate.validator.version>5.3.5.Final</hibernate.validator.version>
         <!--日志记录-->
         <jboss-logging.version>3.3.1.Final</jboss-logging.version>
         <!-- 并发框架Disruptor -->
