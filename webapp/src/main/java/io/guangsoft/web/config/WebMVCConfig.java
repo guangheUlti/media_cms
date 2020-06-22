@@ -24,7 +24,7 @@ import java.util.List;
 
 @ControllerAdvice
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebMVCConfig implements WebMvcConfigurer {
 
     @Bean
     public SpringContextHolder springContextHolder() {
@@ -71,7 +71,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
-        FastJsonConfig fastJsonConfig = new FastJsonConfig();//4
+        FastJsonConfig fastJsonConfig = new FastJsonConfig();
         fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
         FastjsonUnXssFilter jsonUnFilter = new FastjsonUnXssFilter();
         fastJsonConfig.setSerializeFilters(jsonUnFilter);
@@ -95,7 +95,7 @@ public class WebConfig implements WebMvcConfigurer {
         String filePath = env.getProperty("file-path");
         registry.addResourceHandler("/files/**").addResourceLocations("file:" + filePath);
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("/manage/**").addResourceLocations("classpath:/static/manage/");
     }
 
 

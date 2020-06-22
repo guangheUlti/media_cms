@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--POM version-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--基于media父项目-->
+    <parent>
+        <artifactId>media</artifactId>
+        <groupId>io.guangsoft</groupId>
+        <version>1.0</version>
+    </parent>
+    <!--项目坐标-->
+    <groupId>io.guangsoft</groupId>
+    <artifactId>common</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <properties>
+        <!--数据库连接池-->
+        <druid.version>1.0.14</druid.version>
+    </properties>
+    <!--子项目-->
+    <modules>
+
+    </modules>
+</project>
