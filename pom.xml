@@ -27,7 +27,6 @@
     <!--子项目-->
     <modules>
         <module>common</module>
-        <module>concurrent</module>
         <module>webapp</module>
     </modules>
     <properties>
