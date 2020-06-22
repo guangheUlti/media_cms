@@ -2,35 +2,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>media</artifactId>
         <groupId>io.guangsoft</groupId>
         <version>1.0</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
     <artifactId>webapp</artifactId>
     <packaging>jar</packaging>
-    <properties>
-        <bitwalker.version>1.19</bitwalker.version>
-        <swagger.version>2.7.0</swagger.version>
-    </properties>
     <dependencies>
-        <!--引入标签-->
+        <!--springboot-web-->
         <dependency>
-            <groupId>io.guangsoft</groupId>
-            <artifactId>common-crm</artifactId>
-            <version>${project.parent.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <!-- tomcat-->
         <dependency>
-            <groupId>io.guangsoft</groupId>
-            <artifactId>common-quartz</artifactId>
-            <version>${project.parent.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--shiro-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.2</version>
         </dependency>
         <!-- 解析客户端操作系统、浏览器等 -->
         <dependency>
             <groupId>eu.bitwalker</groupId>
             <artifactId>UserAgentUtils</artifactId>
-            <version>${bitwalker.version}</version>
+            <version>1.19</version>
         </dependency>
         <!--整合swagger-->
         <dependency>
