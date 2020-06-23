@@ -1,7 +1,7 @@
 package io.guangsoft.media.dao;
 
-import io.guangsoft.web.modules.sys.entity.UserRole;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import io.guangsoft.media.entity.UserRole;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -1,4 +1,4 @@
-package io.guangsoft.media.utils.constants;
+package io.guangsoft.media.data;
 
 public interface DataBaseConstant {
     /**

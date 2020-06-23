@@ -1,4 +1,4 @@
-package io.guangsoft.media.web.security.shiro.credential;
+package io.guangsoft.media.shiro.credential;
 
 import io.guangsoft.common.utils.SpringContextHolder;
 import io.guangsoft.web.security.shiro.exception.RepeatAuthenticationException;

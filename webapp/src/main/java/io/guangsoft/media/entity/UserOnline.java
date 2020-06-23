@@ -1,16 +1,14 @@
 package io.guangsoft.media.entity;
 
-import io.guangsoft.web.common.entity.DataEntity;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.guangsoft.common.utils.SerializationUtils;
-import io.guangsoft.web.security.shiro.session.mgt.OnlineSession;
+import io.guangsoft.media.shiro.session.mgt.OnlineSession;
+import lombok.Data;
+
 import java.util.Date;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.baomidou.mybatisplus.annotations.TableField;
-
-/**
- */
-@SuppressWarnings("serial")
+@Data
 public class UserOnline extends DataEntity<String> {
 
 	/**
@@ -67,86 +65,6 @@ public class UserOnline extends DataEntity<String> {
 
 	private OnlineSession session;
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public Date getStartTimestamp() {
-		return startTimestamp;
-	}
-
-	public void setStartTimestamp(Date startTimestamp) {
-		this.startTimestamp = startTimestamp;
-	}
-
-	public Date getLastAccessTime() {
-		return lastAccessTime;
-	}
-
-	public void setLastAccessTime(Date lastAccessTime) {
-		this.lastAccessTime = lastAccessTime;
-	}
-
-	public Long getTimeout() {
-		return timeout;
-	}
-
-	public void setTimeout(Long timeout) {
-		this.timeout = timeout;
-	}
-
-	public String getHost() {
-		return host;
-	}
-
-	public void setHost(String host) {
-		this.host = host;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getUserAgent() {
-		return userAgent;
-	}
-
-	public void setUserAgent(String userAgent) {
-		this.userAgent = userAgent;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getOnlineSession() {
-		return onlineSession;
-	}
-
-	public void setOnlineSession(String onlineSession) {
-		this.onlineSession = onlineSession;
-	}
-
 	public OnlineSession getSession() {
 		if (this.session == null) {
 			this.session = (OnlineSession) SerializationUtils.deserializeStr(this.onlineSession);
@@ -157,14 +75,6 @@ public class UserOnline extends DataEntity<String> {
 	public void setSession(OnlineSession session) {
 		this.session = session;
 		this.onlineSession = SerializationUtils.serializeStr(session);
-	}
-
-	public String getSystemHost() {
-		return systemHost;
-	}
-
-	public void setSystemHost(String systemHost) {
-		this.systemHost = systemHost;
 	}
 
 	public static final UserOnline fromOnlineSession(OnlineSession session) {
@@ -179,7 +89,6 @@ public class UserOnline extends DataEntity<String> {
 		online.setUserAgent(session.getUserAgent());
 		online.setSystemHost(session.getSystemHost());
 		online.setSession(session);
-
 		return online;
 	}
 

@@ -11,6 +11,16 @@
     <artifactId>webapp</artifactId>
     <packaging>jar</packaging>
     <dependencies>
+        <dependency>
+            <groupId>io.guangsoft</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.guangsoft</groupId>
+            <artifactId>common-query</artifactId>
+            <version>1.0</version>
+        </dependency>
         <!--springboot-web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

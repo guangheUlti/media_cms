@@ -1,4 +1,4 @@
-package io.guangsoft.media.web.security.shiro.utils;
+package io.guangsoft.media.shiro.utils;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;

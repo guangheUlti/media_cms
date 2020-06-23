@@ -1,8 +1,8 @@
-package io.guangsoft.media.web.security.shiro.filter.authc;
+package io.guangsoft.media.shiro.filter.authc;
 
 import io.guangsoft.common.utils.IpUtils;
 import io.guangsoft.common.utils.StringUtils;
-import io.guangsoft.media.web.security.shiro.exception.RepeatAuthenticationException;
+import io.guangsoft.media.shiro.exception.RepeatAuthenticationException;
 import io.guangsoft.media.web.utils.LoginLogUtils;
 import io.guangsoft.media.web.utils.UserUtils;
 import io.guangsoft.web.security.shiro.exception.RepeatAuthenticationException;
@@ -10,6 +10,7 @@ import io.guangsoft.web.security.shiro.realm.UserRealm;
 import io.guangsoft.web.utils.LoginLogUtils;
 import io.guangsoft.web.utils.UserUtils;
 import org.apache.shiro.authc.*;
+import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.WebUtils;
 
@@ -93,7 +94,7 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
         String host = IpUtils.getIpAddr((HttpServletRequest) request);
         String captcha = getCaptcha(request);
         boolean mobile = isMobileLogin(request);
-        return new UsernamePasswordToken(username, password.toCharArray(), rememberMe, host, captcha, mobile);
+        return new org.apache.shiro.authc.UsernamePasswordToken(username, password.toCharArray(), rememberMe, host, captcha, mobile);
     }
 
     @Override
@@ -151,7 +152,7 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
     protected boolean onLoginFailure(AuthenticationToken token, AuthenticationException e, ServletRequest request,
                                      ServletResponse response) {
         super.onLoginFailure(token, e, request, response);
-        UsernamePasswordToken authcToken = (UsernamePasswordToken) token;
+        org.apache.shiro.authc.UsernamePasswordToken authcToken = (UsernamePasswordToken) token;
         if (!authcToken.isMobileLogin()) {
             String className = e.getClass().getName(), message = "";
             if (IncorrectCredentialsException.class.getName().equals(className)

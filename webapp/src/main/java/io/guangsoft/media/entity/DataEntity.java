@@ -2,7 +2,7 @@ package io.guangsoft.media.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import io.guangsoft.media.utils.constants.DataBaseConstant;
+import io.guangsoft.media.data.DataBaseConstant;
 import lombok.Data;
 
 import java.util.Date;

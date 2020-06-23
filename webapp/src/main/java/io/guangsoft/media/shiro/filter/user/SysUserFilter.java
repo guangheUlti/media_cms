@@ -1,5 +1,5 @@
 
-package io.guangsoft.media.web.security.shiro.filter.user;
+package io.guangsoft.media.shiro.filter.user;
 
 import io.guangsoft.media.web.modules.sys.Constants;
 import io.guangsoft.media.entity.User;

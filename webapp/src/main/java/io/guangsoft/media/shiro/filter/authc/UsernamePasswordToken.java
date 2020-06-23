@@ -1,4 +1,4 @@
-package io.guangsoft.media.web.security.shiro.filter.authc;
+package io.guangsoft.media.shiro.filter.authc;
 
 public class UsernamePasswordToken extends org.apache.shiro.authc.UsernamePasswordToken {
 

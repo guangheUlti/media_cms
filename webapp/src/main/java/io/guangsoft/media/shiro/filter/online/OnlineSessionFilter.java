@@ -1,10 +1,10 @@
 
-package io.guangsoft.media.web.security.shiro.filter.online;
+package io.guangsoft.media.shiro.filter.online;
 
 import io.guangsoft.common.security.shiro.session.SessionDAO;
 import io.guangsoft.common.utils.StringUtils;
 import io.guangsoft.media.entity.User;
-import io.guangsoft.media.web.security.shiro.session.mgt.OnlineSession;
+import io.guangsoft.media.shiro.session.mgt.OnlineSession;
 import io.guangsoft.media.web.utils.UserUtils;
 import io.guangsoft.web.modules.sys.entity.User;
 import io.guangsoft.web.security.shiro.ShiroConstants;

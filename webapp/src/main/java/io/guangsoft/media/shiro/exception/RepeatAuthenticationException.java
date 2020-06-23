@@ -1,4 +1,4 @@
-package io.guangsoft.media.web.security.shiro.exception;
+package io.guangsoft.media.shiro.exception;
 
 import org.apache.shiro.authc.AuthenticationException;
 

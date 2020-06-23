@@ -1,8 +1,8 @@
 package io.guangsoft.media.dao;
 
 import java.util.List;
-import io.guangsoft.common.crm.mapper.BaseTreeMapper;
-import io.guangsoft.web.modules.sys.entity.Menu;
+
+import io.guangsoft.media.entity.Menu;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

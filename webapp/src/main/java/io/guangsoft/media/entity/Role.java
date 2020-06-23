@@ -1,16 +1,13 @@
 package io.guangsoft.media.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.guangsoft.media.web.common.entity.DataEntity;
+import lombok.Data;
 
-
-/**
- * @date 2016-12-03 21:33:15
- */
+@Data
 @TableName("sys_role")
-@SuppressWarnings("serial")
 public class Role extends DataEntity<String> {
 	@TableId(value = "id", type = IdType.UUID)
 	private String id;
@@ -22,45 +19,5 @@ public class Role extends DataEntity<String> {
 	private String isSys;// 是否系统数据
 	@TableField(value = "usable")
 	private String usable;// 是否可用
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getIsSys() {
-		return isSys;
-	}
-
-	public void setIsSys(String isSys) {
-		this.isSys = isSys;
-	}
-
-	public String getUsable() {
-		return usable;
-	}
-
-	public void setUsable(String usable) {
-		this.usable = usable;
-	}
 
 }

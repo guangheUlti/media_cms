@@ -1,4 +1,4 @@
-package io.guangsoft.media.web.security.shiro.session.mgt;
+package io.guangsoft.media.shiro.session.mgt;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

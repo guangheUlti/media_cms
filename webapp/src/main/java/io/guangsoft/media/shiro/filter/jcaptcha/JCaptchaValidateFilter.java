@@ -1,7 +1,7 @@
-package io.guangsoft.media.web.security.shiro.filter.jcaptcha;
+package io.guangsoft.media.shiro.filter.jcaptcha;
 
 import io.guangsoft.common.utils.jcaptcha.JCaptcha;
-import io.guangsoft.media.web.security.shiro.credential.RetryLimitHashedCredentialsMatcher;
+import io.guangsoft.media.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import io.guangsoft.web.security.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import io.guangsoft.web.security.shiro.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.filter.AccessControlFilter;

@@ -2,8 +2,8 @@ package io.guangsoft.media.dao;
 
 import java.util.List;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
-import io.guangsoft.web.modules.sys.entity.Dict;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import io.guangsoft.media.entity.Dict;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
