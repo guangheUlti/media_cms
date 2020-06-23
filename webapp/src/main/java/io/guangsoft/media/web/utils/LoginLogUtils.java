@@ -1,7 +1,7 @@
 package io.guangsoft.media.web.utils;
 
-import io.guangsoft.media.web.modules.sys.entity.LoginLog;
-import io.guangsoft.media.web.modules.sys.service.ILoginLogService;
+import io.guangsoft.media.entity.LoginLog;
+import io.guangsoft.media.service.ILoginLogService;
 import io.guangsoft.web.modules.sys.entity.LoginLog;
 import io.guangsoft.web.modules.sys.service.ILoginLogService;
 import io.guangsoft.common.disruptor.Task;

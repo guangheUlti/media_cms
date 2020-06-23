@@ -2,7 +2,7 @@
 package io.guangsoft.media.web.security.shiro.filter.user;
 
 import io.guangsoft.media.web.modules.sys.Constants;
-import io.guangsoft.media.web.modules.sys.entity.User;
+import io.guangsoft.media.entity.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;

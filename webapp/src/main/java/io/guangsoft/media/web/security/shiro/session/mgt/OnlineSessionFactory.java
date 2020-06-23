@@ -4,7 +4,7 @@
  */
 package io.guangsoft.media.web.security.shiro.session.mgt;
 
-import io.guangsoft.media.web.modules.sys.entity.UserOnline;
+import io.guangsoft.media.entity.UserOnline;
 import io.guangsoft.web.modules.sys.entity.UserOnline;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SessionContext;

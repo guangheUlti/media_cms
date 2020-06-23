@@ -2,7 +2,7 @@ package io.guangsoft.media.web.interceptor;
 
 import io.guangsoft.common.utils.MessageUtils;
 import io.guangsoft.common.utils.StringUtils;
-import io.guangsoft.media.web.modules.sys.entity.Menu;
+import io.guangsoft.media.entity.Menu;
 import io.guangsoft.media.web.utils.MenuTreeHelper;
 import io.guangsoft.media.web.utils.UserUtils;
 import io.guangsoft.web.modules.sys.entity.Menu;

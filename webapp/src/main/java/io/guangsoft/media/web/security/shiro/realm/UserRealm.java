@@ -2,8 +2,8 @@ package io.guangsoft.media.web.security.shiro.realm;
 
 import java.io.Serializable;
 
-import io.guangsoft.media.web.modules.sys.entity.User;
-import io.guangsoft.media.web.modules.sys.service.IUserService;
+import io.guangsoft.media.entity.User;
+import io.guangsoft.media.service.IUserService;
 import io.guangsoft.media.web.security.shiro.filter.authc.UsernamePasswordToken;
 import io.guangsoft.media.web.utils.UserUtils;
 import org.apache.shiro.authc.AuthenticationException;

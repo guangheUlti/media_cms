@@ -1,6 +1,6 @@
 package io.guangsoft.media.web.utils;
 
-import io.guangsoft.media.web.modules.sys.entity.Menu;
+import io.guangsoft.media.entity.Menu;
 import io.guangsoft.web.modules.sys.entity.Menu;
 import io.guangsoft.common.utils.ObjectUtils;
 import com.alibaba.fastjson.JSON;

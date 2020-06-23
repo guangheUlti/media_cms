@@ -4,7 +4,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://192.168.50.30:3306/cms?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/media?useUnicode=true&characterEncoding=UTF-8
     #这里是配置druid连接池，以下都是druid的配置信息
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -48,8 +48,8 @@ logging:
 
 #mybatis-plus
 mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
-  type-aliases-package: io.guangsoft.web.modules.*.entity
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: io.guangsoft.media.dao
   configuration:
     map-underscore-to-camel-case: true
   global-config:
@@ -67,6 +67,6 @@ swagger:
   contact.name:
   contact.url:
   contact.email:
-  base-package: io.guangsoft.web
+  base-package: io.guangsoft.media.controller
   base-path: /**
-  exclude-path: /error, /ops/**
+  exclude-path: /error
