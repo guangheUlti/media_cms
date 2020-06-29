@@ -1,19 +1,103 @@
 package io.guangsoft.media.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import javax.sql.DataSource;
+import java.sql.SQLException;
 
 @Configuration
 public class DruidConfig {
 
-        /**
-         * 注册一个StatViewServlet
-         * @return
-         */
+    private Logger logger = LoggerFactory.getLogger(DruidConfig.class);
+
+    @Value("${spring.datasource.url}")
+    private String dbUrl;
+
+    @Value("${spring.datasource.username}")
+    private String username;
+
+    @Value("${spring.datasource.password}")
+    private String password;
+    @Value("${spring.datasource.driver-class-name}")
+    private String driverClassName;
+
+    @Value("${spring.datasource.druid.initial-size}")
+    private int initialSize;
+
+    @Value("${spring.datasource.druid.min-idle}")
+    private int minIdle;
+
+    @Value("${spring.datasource.druid.max-active}")
+    private int maxActive;
+
+    @Value("${spring.datasource.druid.max-wait}")
+    private int maxWait;
+
+    @Value("${spring.datasource.druid.time-between-eviction-runs-millis}")
+    private int timeBetweenEvictionRunsMillis;
+
+    @Value("${spring.datasource.druid.min-evictable-idle-time-millis}")
+    private int minEvictableIdleTimeMillis;
+
+    @Value("${spring.datasource.druid.test-while-idle}")
+    private boolean testWhileIdle;
+
+    @Value("${spring.datasource.druid.test-on-borrow}")
+    private boolean testOnBorrow;
+
+    @Value("${spring.datasource.druid.test-on-return}")
+    private boolean testOnReturn;
+
+    @Value("${spring.datasource.druid.pool-prepared-statements}")
+    private boolean poolPreparedStatements;
+
+    @Value("${spring.datasource.druid.max-pool-prepared-statement-per-connection-size}")
+    private int maxPoolPreparedStatementPerConnectionSize;
+
+    @Value("${spring.datasource.druid.filters}")
+    private String filters;
+
+    @Bean
+    @Primary
+    public DataSource dataSource() {
+        DruidDataSource datasource = new DruidDataSource();
+
+        datasource.setUrl(this.dbUrl);
+        datasource.setUsername(this.username);
+        datasource.setPassword(this.password);
+        datasource.setDriverClassName(this.driverClassName);
+
+        datasource.setInitialSize(this.initialSize);
+        datasource.setMinIdle(this.minIdle);
+        datasource.setMaxActive(this.maxActive);
+        datasource.setMaxWait(this.maxWait);
+        datasource.setTimeBetweenEvictionRunsMillis(this.timeBetweenEvictionRunsMillis);
+        datasource.setMinEvictableIdleTimeMillis(this.minEvictableIdleTimeMillis);
+        datasource.setTestWhileIdle(this.testWhileIdle);
+        datasource.setTestOnBorrow(this.testOnBorrow);
+        datasource.setTestOnReturn(this.testOnReturn);
+        datasource.setPoolPreparedStatements(this.poolPreparedStatements);
+        datasource.setMaxPoolPreparedStatementPerConnectionSize(this.maxPoolPreparedStatementPerConnectionSize);
+
+        try {
+            datasource.setFilters(this.filters);
+        } catch (SQLException e) {
+            logger.error("druid configuration init fail!");
+        }
+
+        return datasource;
+    }
+
         @Bean
         public ServletRegistrationBean druidStatViewServle(){
             //org.springframework.boot.context.embedded.ServletRegistrationBean提供类的进行注册.
@@ -31,18 +115,11 @@ public class DruidConfig {
             return servletRegistrationBean;
         }
 
-        /**
-         * 注册一个：filterRegistrationBean
-         * @return
-         */
         @Bean
         public FilterRegistrationBean druidStatFilter(){
-
             FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
-
             //添加过滤规则.
             filterRegistrationBean.addUrlPatterns("/*");
-
             //添加不需要忽略的格式信息.
             filterRegistrationBean.addInitParameter("exclusions","/static/*,*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
             return filterRegistrationBean;

@@ -1,4 +1,4 @@
-package io.guangsoft.media.config;
+package io.guangsoft.media.fun;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

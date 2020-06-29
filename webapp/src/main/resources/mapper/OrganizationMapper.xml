@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="io.guangsoft.web.modules.sys.mapper.OrganizationMapper">
+<mapper namespace="io.guangsoft.media.dao.OrganizationMapper">
 
 	<!-- 查询父模块 -->
-	<resultMap id="parentResult" type="io.guangsoft.web.modules.sys.entity.Organization">
+	<resultMap id="parentResult" type="io.guangsoft.media.entity.Organization">
 		<id property="id" column="parent_id" />
 		<result property="name" column="parent_name" />
 	</resultMap>
 
-	<resultMap id="BaseResultMap" type="io.guangsoft.web.modules.sys.entity.Organization">
+	<resultMap id="BaseResultMap" type="io.guangsoft.media.entity.Organization">
 		<!-- 树形基础模块 -->
 		<id column="id" property="id" jdbcType="VARCHAR" />
 		<result column="name" property="name" jdbcType="VARCHAR" />

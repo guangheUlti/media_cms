@@ -1,4 +1,4 @@
-package io.guangsoft.media.config;
+package io.guangsoft.media.fun;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;

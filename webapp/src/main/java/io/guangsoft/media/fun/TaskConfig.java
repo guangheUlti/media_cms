@@ -1,4 +1,4 @@
-package io.guangsoft.media.config;
+package io.guangsoft.media.fun;
 
 import io.guangsoft.common.disruptor.TaskHelper;
 import org.springframework.context.annotation.Bean;

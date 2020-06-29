@@ -1,4 +1,4 @@
-package io.guangsoft.media.config;
+package io.guangsoft.media.fun;
 
 import io.guangsoft.common.security.shiro.cache.SpringCacheManagerWrapper;
 import io.guangsoft.common.security.shiro.filter.ShiroFilterFactoryBean;

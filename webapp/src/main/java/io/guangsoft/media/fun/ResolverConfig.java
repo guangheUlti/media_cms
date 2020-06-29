@@ -1,4 +1,4 @@
-package io.guangsoft.media.config;
+package io.guangsoft.media.fun;
 
 import io.guangsoft.common.query.resolver.*;
 import org.springframework.context.annotation.Configuration;
