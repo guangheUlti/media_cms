@@ -31,6 +31,7 @@ public class DruidConfig {
 
     @Value("${spring.datasource.password}")
     private String password;
+
     @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 

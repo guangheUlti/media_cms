@@ -76,6 +76,16 @@
             <artifactId>jackson-dataformat-yaml</artifactId>
             <version>2.11.0</version>
         </dependency>
+        <!--开启ehcache缓存-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <!-- Ehcache-->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
         <!--excel操作-->
         <dependency>
             <groupId>cn.afterturn</groupId>

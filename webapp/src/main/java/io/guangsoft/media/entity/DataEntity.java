@@ -2,7 +2,6 @@ package io.guangsoft.media.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import io.guangsoft.media.data.DataBaseConstant;
 import lombok.Data;
 
 import java.util.Date;
@@ -27,6 +26,6 @@ public abstract class DataEntity<ID> extends AbstractEntity<ID> {
 
 	public DataEntity() {
 		super();
-		this.delFlag = DataBaseConstant.DEL_FLAG_NORMAL;
+		this.delFlag = "0";
 	}
 }
