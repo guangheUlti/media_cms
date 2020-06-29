@@ -1,6 +1,7 @@
 package io.guangsoft.media.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,7 +13,9 @@ import com.alibaba.druid.support.http.WebStatFilter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+import javax.servlet.Filter;
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.sql.SQLException;
 
 @Configuration
@@ -71,12 +74,10 @@ public class DruidConfig {
     @Primary
     public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
-
         datasource.setUrl(this.dbUrl);
         datasource.setUsername(this.username);
         datasource.setPassword(this.password);
         datasource.setDriverClassName(this.driverClassName);
-
         datasource.setInitialSize(this.initialSize);
         datasource.setMinIdle(this.minIdle);
         datasource.setMaxActive(this.maxActive);
@@ -98,31 +99,55 @@ public class DruidConfig {
         return datasource;
     }
 
-        @Bean
-        public ServletRegistrationBean druidStatViewServle(){
-            //org.springframework.boot.context.embedded.ServletRegistrationBean提供类的进行注册.
-            ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(),"/admin/sys/monitor/druid/*");
-            //添加初始化参数：initParams
-            //白名单：
-            //servletRegistrationBean.addInitParameter("allow","127.0.0.1");
-            //IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not permitted to view this page.
-            //servletRegistrationBean.addInitParameter("deny","192.168.1.73");
-            //登录查看信息的账号密码.
-            //servletRegistrationBean.addInitParameter("loginUsername","admin2");
-            //servletRegistrationBean.addInitParameter("loginPassword","123456");
-            //是否能够重置数据.
-            //servletRegistrationBean.addInitParameter("resetEnable","false");
-            return servletRegistrationBean;
-        }
-
-        @Bean
-        public FilterRegistrationBean druidStatFilter(){
-            FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
-            //添加过滤规则.
-            filterRegistrationBean.addUrlPatterns("/*");
-            //添加不需要忽略的格式信息.
-            filterRegistrationBean.addInitParameter("exclusions","/static/*,*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
-            return filterRegistrationBean;
-        }
-
+    //开启druid监控
+    @Bean
+    public ServletRegistrationBean druidStatViewServle(){
+        //注册servlet
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(),"/druid/*");
+        /*
+        //白名单
+        servletRegistrationBean.addInitParameter("allow","127.0.0.1");
+        //IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not permitted to view this page.
+        servletRegistrationBean.addInitParameter("deny","192.168.1.1");
+        //登录查看信息的账号密码.
+        servletRegistrationBean.addInitParameter("loginUsername","root");
+        servletRegistrationBean.addInitParameter("loginPassword","root");
+        //是否能够重置数据.
+        servletRegistrationBean.addInitParameter("resetEnable","false");
+        */
+        return servletRegistrationBean;
     }
+
+    //采集web-jdbc关联监控的数据
+    @Bean
+    public FilterRegistrationBean druidStatFilter(){
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
+        //添加过滤规则.
+        filterRegistrationBean.addUrlPatterns("/*");
+        //添加忽略的格式信息.
+        filterRegistrationBean.addInitParameter("exclusions","/assets/*,*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+        return filterRegistrationBean;
+    }
+
+    //去除Druid监控页面的广告
+    @Bean
+    public FilterRegistrationBean removeDruidAdFilter() throws IOException {
+         // 获取common.js内容
+         String text= Utils.readFromResource("support/http/resources/js/common.js");
+         // 屏蔽 this.buildFooter(); 直接替换为空字符串,让js没机会调用
+         final String newJs= text.replace("this.buildFooter();", "");
+         // 新建一个过滤器注册器对象
+         FilterRegistrationBean<Filter> registration= new FilterRegistrationBean<>();
+         // 注册common.js文件的过滤器
+         registration.addUrlPatterns("/druid/js/common.js");
+         // 添加一个匿名的过滤器对象,并把改造过的common.js文件内容写入到浏览器
+         registration.setFilter((servletRequest, servletResponse, filterChain) ->{
+             // 重置缓冲区，响应头不会被重置
+             servletResponse.resetBuffer();
+             // 把改造过的common.js文件内容写入到浏览器
+             servletResponse.getWriter().write(newJs);
+         });
+         return registration;
+    }
+
+}
