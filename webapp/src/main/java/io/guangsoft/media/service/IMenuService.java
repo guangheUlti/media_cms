@@ -1,13 +1,9 @@
 package io.guangsoft.media.service;
 
+import io.guangsoft.media.entity.Menu;
+
 import java.util.List;
 
-import io.guangsoft.common.crm.service.ITreeCommonService;
-import io.guangsoft.web.modules.sys.entity.Menu;
-
-/**
- * @date 2014-12-20 21:33:32
- */
 public interface IMenuService extends ITreeCommonService<Menu, String> {
 
 	/**

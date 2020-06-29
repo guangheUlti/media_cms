@@ -1,6 +1,8 @@
 package io.guangsoft.media.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.guangsoft.common.utils.StringUtils;
 import io.guangsoft.media.dao.UserMapper;
 import io.guangsoft.media.entity.User;
@@ -28,7 +30,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 
 	@Override
 	public void changePassword(String userid, String newPassword) {
-		User user = baseMapper.selectById(userid);
+		User user = super.getById(userid);
 		if (user != null) {
 			user.setPassword(newPassword);
 			passwordService.encryptPassword(user);
@@ -41,7 +43,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 		if (StringUtils.isEmpty(username)) {
 			return null;
 		}
-		return baseMapper.selectOne(new QueryWrapper<User>().eq("username", username));
+		return super.getOne(new QueryWrapper<User>().eq("username", username));
 	}
 
 	@Override
@@ -49,7 +51,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 		if (StringUtils.isEmpty(email)) {
 			return null;
 		}
-		return baseMapper.selectOne(new QueryWrapper<User>().eq("email", email));
+		return super.getOne(new QueryWrapper<User>().eq("email", email));
 	}
 
 	@Override
@@ -57,37 +59,29 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 		if (StringUtils.isEmpty(phone)) {
 			return null;
 		}
-		return selectOne(new EntityWrapper<User>(User.class).eq("phone", phone));
+		return super.getOne(new QueryWrapper<User>().eq("phone", phone));
 	}
 
 	@Override
-	public boolean insert(User user) {
+	public boolean save(User user) {
 		passwordService.encryptPassword(user);
 		return super.save(user);
 	}
 
 	@Override
-	public boolean deleteById(Serializable id) {
+	public boolean removeById(Serializable id) {
 		// 删除角色关联
-		userRoleService.delete(new EntityWrapper<UserRole>(UserRole.class).eq("userId", id));
+		userRoleService.remove(new QueryWrapper<UserRole>().eq("userId", id));
 		// 删除部门关联
-		userOrganizationService.delete(new EntityWrapper<UserOrganization>(UserOrganization.class).eq("userId", id));
-		return super.deleteById(id);
+		userOrganizationService.remove(new QueryWrapper<UserOrganization>().eq("userId", id));
+		return super.removeById(id);
 	}
 
 	@Override
-	public boolean deleteBatchIds(Collection<? extends Serializable> idList) {
+	public boolean removeByIds(Collection<? extends Serializable> idList) {
 		for (Object id : idList) {
-			this.deleteById((Serializable) id);
+			this.removeById((Serializable) id);
 		}
 		return true;
 	}
-
-	@Override
-	public Page<User> selectPage(Page<User> page, Wrapper<User> wrapper) {
-		wrapper.eq("1", "1");
-		page.setRecords(baseMapper.selectUserList(page, wrapper));
-		return page;
-	}
-
 }

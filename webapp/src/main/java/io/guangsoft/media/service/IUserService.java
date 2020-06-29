@@ -1,14 +1,11 @@
 package io.guangsoft.media.service;
 
-import io.guangsoft.common.crm.service.ICommonService;
-import io.guangsoft.web.modules.sys.entity.User;
+import io.guangsoft.media.entity.User;
 
-/**
- */
 public interface IUserService extends ICommonService<User> {
 	/**
 	 * 修改密码
-	 * @param userId
+	 * @param userid
 	 * @param newPassword
 	 */
 	public void changePassword(String userid, String newPassword);
@@ -22,14 +19,12 @@ public interface IUserService extends ICommonService<User> {
 
 	/**
 	 * 根据Email查找用户
-	 * @param username
 	 * @return
 	 */
 	public User findByEmail(String email);
 
 	/**
 	 * 根据Email查找用户
-	 * @param username
 	 * @return
 	 */
 	public User findByPhone(String phone);

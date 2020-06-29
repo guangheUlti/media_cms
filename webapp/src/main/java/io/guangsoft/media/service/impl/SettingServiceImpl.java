@@ -2,7 +2,6 @@ package io.guangsoft.media.service.impl;
 
 
 import io.guangsoft.media.service.ISettingService;
-import io.guangsoft.web.modules.sys.service.ISettingService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

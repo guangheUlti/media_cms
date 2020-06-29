@@ -1,11 +1,7 @@
 package io.guangsoft.media.service;
 
-import io.guangsoft.common.crm.service.ICommonService;
-import io.guangsoft.web.modules.sys.entity.DataSource;
+import io.guangsoft.media.entity.DataSource;
 
-/**   
- * @date 2017-05-10 12:01:57
- */
 public interface IDataSourceService extends ICommonService<DataSource> {
 
 }

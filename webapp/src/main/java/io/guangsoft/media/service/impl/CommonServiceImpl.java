@@ -10,7 +10,7 @@ import io.guangsoft.common.query.data.Pageable;
 import io.guangsoft.common.query.data.Queryable;
 import io.guangsoft.media.data.DuplicateValid;
 import io.guangsoft.media.service.ICommonService;
-import io.guangsoft.media.service.QueryToWrapper;
+import io.guangsoft.media.data.QueryToWrapper;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 

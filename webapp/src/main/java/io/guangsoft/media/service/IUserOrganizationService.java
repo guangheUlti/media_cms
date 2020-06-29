@@ -1,7 +1,6 @@
 package io.guangsoft.media.service;
 
-import io.guangsoft.common.crm.service.ICommonService;
-import io.guangsoft.web.modules.sys.entity.UserOrganization;
+import io.guangsoft.media.entity.UserOrganization;
 
 public interface IUserOrganizationService extends ICommonService<UserOrganization> {
 

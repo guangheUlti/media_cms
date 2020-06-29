@@ -1,4 +1,4 @@
-package io.guangsoft.media.service;
+package io.guangsoft.media.data;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
