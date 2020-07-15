@@ -2,8 +2,8 @@ package io.guangsoft.common.quartz.config;
 
 import io.guangsoft.common.quartz.QuartzManager;
 import io.guangsoft.common.quartz.callback.QuartzInitCallback;
-import io.guangsoft.common.utils.SpringContextHolder;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.SpringContextHolder;
+import io.guangsoft.media.utils.StringUtils;
 import org.quartz.Scheduler;
 import org.quartz.ee.servlet.QuartzInitializerListener;
 import org.springframework.beans.factory.annotation.Autowired;

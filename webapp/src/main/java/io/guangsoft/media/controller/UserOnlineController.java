@@ -19,7 +19,7 @@ import io.guangsoft.common.query.data.Queryable;
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresMethodPermissions;
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresPathPermission;
 import io.guangsoft.common.security.shiro.session.SessionDAO;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import com.alibaba.fastjson.JSON;
 import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;

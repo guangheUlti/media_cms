@@ -1,8 +1,8 @@
 package io.guangsoft.media.web.common.controller;
 
 import io.guangsoft.common.http.Response;
-import io.guangsoft.common.utils.MessageUtils;
-import io.guangsoft.common.utils.jcaptcha.JCaptcha;
+import io.guangsoft.media.utils.MessageUtils;
+import io.guangsoft.media.utils.jcaptcha.JCaptcha;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

@@ -11,7 +11,7 @@ import org.apache.shiro.session.mgt.SessionContext;
 import org.apache.shiro.session.mgt.SessionFactory;
 import org.apache.shiro.web.session.mgt.WebSessionContext;
 
-import io.guangsoft.common.utils.IpUtils;
+import io.guangsoft.media.utils.IpUtils;
 
 import javax.servlet.http.HttpServletRequest;
 

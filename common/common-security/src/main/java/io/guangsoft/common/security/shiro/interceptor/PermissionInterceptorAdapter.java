@@ -2,7 +2,7 @@ package io.guangsoft.common.security.shiro.interceptor;
 
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresMethodPermissions;
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresPathPermission;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.subject.Subject;

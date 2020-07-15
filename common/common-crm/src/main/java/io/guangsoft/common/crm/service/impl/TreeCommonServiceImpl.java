@@ -7,7 +7,7 @@ import io.guangsoft.common.crm.mapper.BaseTreeMapper;
 import io.guangsoft.common.crm.parse.QueryToWrapper;
 import io.guangsoft.common.crm.service.ITreeCommonService;
 import io.guangsoft.common.query.data.Queryable;
-import io.guangsoft.common.utils.ObjectUtils;
+import io.guangsoft.media.utils.ObjectUtils;
 import org.springframework.transaction.annotation.Transactional;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 

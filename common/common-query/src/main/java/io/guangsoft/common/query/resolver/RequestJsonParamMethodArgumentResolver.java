@@ -1,8 +1,8 @@
 package io.guangsoft.common.query.resolver;
 
 import io.guangsoft.common.query.annotation.RequestJsonParam;
-import io.guangsoft.common.utils.mapper.JsonMapper;
-import io.guangsoft.common.utils.mapper.MapWapper;
+import io.guangsoft.media.utils.mapper.JsonMapper;
+import io.guangsoft.media.utils.mapper.MapWapper;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.type.MapType;

@@ -1,6 +1,6 @@
 package io.guangsoft.common.http;
 
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 

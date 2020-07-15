@@ -1,6 +1,6 @@
 package io.guangsoft.common.query.data;
 
-import io.guangsoft.common.utils.ComplexPropertyPreFilter;
+import io.guangsoft.media.utils.ComplexPropertyPreFilter;
 import com.alibaba.fastjson.serializer.SerializeFilter;
 import org.apache.commons.lang3.StringUtils;
 

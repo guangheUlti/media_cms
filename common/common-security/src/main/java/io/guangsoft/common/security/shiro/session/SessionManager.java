@@ -1,6 +1,6 @@
 package io.guangsoft.common.security.shiro.session;
 
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import org.apache.shiro.session.InvalidSessionException;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.UnknownSessionException;

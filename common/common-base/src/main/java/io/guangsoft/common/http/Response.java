@@ -1,7 +1,7 @@
 package io.guangsoft.common.http;
 
-import io.guangsoft.common.utils.fastjson.FastjsonPropertyPreFilter;
-import io.guangsoft.common.utils.fastjson.FastjsonUnXssFilter;
+import io.guangsoft.media.utils.fastjson.FastjsonPropertyPreFilter;
+import io.guangsoft.media.utils.fastjson.FastjsonUnXssFilter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializeFilter;
 import java.io.Serializable;

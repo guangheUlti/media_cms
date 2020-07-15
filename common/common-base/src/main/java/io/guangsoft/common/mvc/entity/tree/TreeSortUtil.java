@@ -1,6 +1,6 @@
 package io.guangsoft.common.mvc.entity.tree;
 
-import io.guangsoft.common.utils.ObjectUtils;
+import io.guangsoft.media.utils.ObjectUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;

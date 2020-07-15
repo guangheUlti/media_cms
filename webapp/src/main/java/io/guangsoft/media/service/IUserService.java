@@ -29,4 +29,10 @@ public interface IUserService extends ICommonService<User> {
 	 */
 	public User findByPhone(String phone);
 
+    /**
+     * 加密用户密码
+     * @param user
+     */
+	public void encryptPassword(User user);
+
 }

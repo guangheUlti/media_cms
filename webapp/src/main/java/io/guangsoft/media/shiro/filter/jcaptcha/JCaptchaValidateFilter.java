@@ -1,15 +1,15 @@
 package io.guangsoft.media.shiro.filter.jcaptcha;
 
-import io.guangsoft.common.utils.jcaptcha.JCaptcha;
+import io.guangsoft.media.utils.jcaptcha.JCaptcha;
 import io.guangsoft.media.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import io.guangsoft.web.security.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import io.guangsoft.web.security.shiro.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
 
-import io.guangsoft.common.utils.ServletUtils;
-import io.guangsoft.common.utils.SpringContextHolder;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.ServletUtils;
+import io.guangsoft.media.utils.SpringContextHolder;
+import io.guangsoft.media.utils.StringUtils;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

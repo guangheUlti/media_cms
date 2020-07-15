@@ -1,7 +1,7 @@
 package io.guangsoft.common.query.resolver;
 
 import io.guangsoft.common.query.annotation.FormModel;
-import io.guangsoft.common.utils.mapper.MapWapper;
+import io.guangsoft.media.utils.mapper.MapWapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotationUtils;

@@ -3,7 +3,7 @@ package io.guangsoft.media.web.common.listener;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-import io.guangsoft.common.utils.MessageUtils;
+import io.guangsoft.media.utils.MessageUtils;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -4,7 +4,7 @@ import io.guangsoft.common.query.data.Queryable;
 import io.guangsoft.common.query.data.Condition;
 import io.guangsoft.common.query.data.Condition.Filter;
 import io.guangsoft.common.query.data.Condition.Operator;
-import io.guangsoft.common.utils.ObjectUtils;
+import io.guangsoft.media.utils.ObjectUtils;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import java.lang.reflect.Method;
 import java.util.List;

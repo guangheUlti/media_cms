@@ -3,7 +3,7 @@ package io.guangsoft.common.quartz.factory;
 import io.guangsoft.common.quartz.callback.QuartzExecuteCallback;
 import io.guangsoft.common.quartz.constant.ScheduleConstants;
 import io.guangsoft.common.quartz.data.ScheduleJob;
-import io.guangsoft.common.utils.SpringContextHolder;
+import io.guangsoft.media.utils.SpringContextHolder;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.slf4j.Logger;

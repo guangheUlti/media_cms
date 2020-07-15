@@ -19,7 +19,7 @@ import io.guangsoft.common.query.data.Queryable;
 import io.guangsoft.common.query.utils.QueryableConvertUtils;
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresMethodPermissions;
 import io.guangsoft.common.security.shiro.authz.annotation.RequiresPathPermission;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializeFilter;
 import org.springframework.beans.factory.annotation.Autowired;

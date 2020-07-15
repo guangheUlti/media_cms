@@ -2,7 +2,7 @@ package io.guangsoft.common.crm.entity;
 
 import io.guangsoft.common.mvc.entity.AbstractEntity;
 import io.guangsoft.common.mvc.entity.tree.TreeNode;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.FieldStrategy;

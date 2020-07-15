@@ -1,9 +1,7 @@
 package io.guangsoft.media.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.StringUtils;
 import io.guangsoft.media.dao.UserMapper;
 import io.guangsoft.media.entity.User;
 import io.guangsoft.media.entity.UserOrganization;
@@ -11,6 +9,10 @@ import io.guangsoft.media.entity.UserRole;
 import io.guangsoft.media.service.IUserOrganizationService;
 import io.guangsoft.media.service.IUserRoleService;
 import io.guangsoft.media.service.IUserService;
+import org.apache.shiro.crypto.RandomNumberGenerator;
+import org.apache.shiro.crypto.SecureRandomNumberGenerator;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,10 +23,12 @@ import java.util.Collection;
 @Transactional
 @Service("userService")
 public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> implements IUserService {
-	@Autowired
-	PasswordService passwordService;
+
+    private RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
+
 	@Autowired
 	private IUserOrganizationService userOrganizationService;
+
 	@Autowired
 	private IUserRoleService userRoleService;
 
@@ -33,7 +37,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 		User user = super.getById(userid);
 		if (user != null) {
 			user.setPassword(newPassword);
-			passwordService.encryptPassword(user);
+			encryptPassword(user);
 		}
 		super.saveOrUpdate(user);
 	}
@@ -84,4 +88,11 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 		}
 		return true;
 	}
+
+    @Override
+    public void encryptPassword(User user) {
+        user.setSalt(randomNumberGenerator.nextBytes().toHex());
+        String password = new SimpleHash("MD5", user.getPassword(), ByteSource.Util.bytes(user.getSalt()), 1).toHex();
+        user.setPassword(password);
+    }
 }

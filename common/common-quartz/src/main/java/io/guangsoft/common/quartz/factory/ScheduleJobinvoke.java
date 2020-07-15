@@ -2,7 +2,7 @@ package io.guangsoft.common.quartz.factory;
 
 import io.guangsoft.common.quartz.data.ScheduleJob;
 import io.guangsoft.common.quartz.exception.QuartzException;
-import io.guangsoft.common.utils.SpringContextHolder;
+import io.guangsoft.media.utils.SpringContextHolder;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.ReflectionUtils;
 

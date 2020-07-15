@@ -1,7 +1,7 @@
 package io.guangsoft.media.shiro.filter.authc;
 
-import io.guangsoft.common.utils.IpUtils;
-import io.guangsoft.common.utils.StringUtils;
+import io.guangsoft.media.utils.IpUtils;
+import io.guangsoft.media.utils.StringUtils;
 import io.guangsoft.media.shiro.exception.RepeatAuthenticationException;
 import io.guangsoft.media.web.utils.LoginLogUtils;
 import io.guangsoft.media.web.utils.UserUtils;

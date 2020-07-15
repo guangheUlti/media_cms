@@ -3,7 +3,7 @@
  */
 package io.guangsoft.common.security.shiro.cache;
 
-import io.guangsoft.common.utils.ServletUtils;
+import io.guangsoft.media.utils.ServletUtils;
 import com.google.common.collect.Sets;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
