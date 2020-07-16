@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @TableName("sys_dict")
-public class Dict extends DataEntity<String> {
+public class Dict extends DataEntity {
 
 	/** 主键 */
 	@TableId(value = "id", type = IdType.ASSIGN_UUID)

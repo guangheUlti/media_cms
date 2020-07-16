@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Data
 @TableName("sys_login_log")
-public class LoginLog extends AbstractEntity<String> {
+public class LoginLog {
 
     /**访问ID*/
     @TableId(value = "id", type = IdType.ASSIGN_UUID)

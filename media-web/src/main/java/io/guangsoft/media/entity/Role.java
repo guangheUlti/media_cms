@@ -8,8 +8,8 @@ import lombok.Data;
 
 @Data
 @TableName("sys_role")
-public class Role extends DataEntity<String> {
-	@TableId(value = "id", type = IdType.UUID)
+public class Role extends DataEntity {
+	@TableId(value = "id", type = IdType.ASSIGN_UUID)
 	private String id;
 	@TableField(value = "name")
 	private String name;// 角色名称

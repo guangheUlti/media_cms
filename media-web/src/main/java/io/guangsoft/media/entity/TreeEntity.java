@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * 树抽象实体基类
  */
-public abstract class TreeEntity<T> extends AbstractEntity<String> implements TreeNode<String>,java.io.Serializable {
+public abstract class TreeEntity<T> {
 	@TableId(value = "id", type = IdType.ASSIGN_UUID)
 	private String id; // 编号
 	@TableField(value = "name")
@@ -68,7 +68,6 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		this.parentIds = parentIds;
 	}
 
-	@Override
 	public boolean isRoot() {
 		if (getParentId() == null || getParentId().equals("0") || getParentId().equals("")) {
 			return true;
@@ -84,7 +83,6 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		this.hasChildren = hasChildren;
 	}
 
-	@Override
 	public Long getLevel() {
 		if (parentIds == null) {
 			return (long) 0;
@@ -99,7 +97,6 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		return (long) (idsList.size());
 	}
 
-	@Override
 	public Boolean isLeaf() {
 		if (isHasChildren()) {
 			return Boolean.FALSE;
@@ -108,7 +105,6 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		return Boolean.TRUE;
 	}
 
-	@Override
 	public String makeSelfAsNewParentIds() {
 		if (StringUtils.isEmpty(getParentIds())) {
 			return getId() + getSeparator();
@@ -116,7 +112,6 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		return getParentIds() + getId() + getSeparator();
 	}
 
-	@Override
 	public String getSeparator() {
 		return "/";
 	}
@@ -125,12 +120,10 @@ public abstract class TreeEntity<T> extends AbstractEntity<String> implements Tr
 		this.expanded = expanded;
 	}
 
-	@Override
 	public Boolean getExpanded() {
 		return expanded;
 	}
 
-	@Override
 	public void setLoaded(Boolean loaded) {
 		this.loaded = loaded;
 	}

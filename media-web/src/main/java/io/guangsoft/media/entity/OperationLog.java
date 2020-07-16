@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Data
 @TableName("sys_operation_log")
-public class OperationLog extends AbstractEntity<String> {
+public class OperationLog {
 	/**成功*/
 	public final static  String OPERATION_LOG_SUCCESS="1";
 	/**失败*/

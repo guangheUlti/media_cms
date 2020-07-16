@@ -7,8 +7,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.guangsoft.media.service.ICommonService;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Transactional
 public class CommonServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M, T> implements ICommonService<T> {
 
@@ -22,17 +20,6 @@ public class CommonServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M
     public Page<T> listPage(QueryWrapper<T> wrapper, Page<T> page) {
         baseMapper.selectPage(page, wrapper);
         return page;
-    }
-
-    @Override
-    public List<T> list() {
-        QueryWrapper<T> queryWrapper = new QueryWrapper<T>();
-        return list(queryWrapper);
-    }
-
-    @Override
-    public List<T> list(QueryWrapper<T> wrapper) {
-        return baseMapper.selectList(wrapper);
     }
 
 }
