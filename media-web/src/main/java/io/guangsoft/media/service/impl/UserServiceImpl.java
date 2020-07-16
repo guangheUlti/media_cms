@@ -1,7 +1,6 @@
 package io.guangsoft.media.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import io.guangsoft.media.utils.StringUtils;
 import io.guangsoft.media.dao.UserMapper;
 import io.guangsoft.media.entity.User;
 import io.guangsoft.media.entity.UserOrganization;
@@ -9,6 +8,7 @@ import io.guangsoft.media.entity.UserRole;
 import io.guangsoft.media.service.IUserOrganizationService;
 import io.guangsoft.media.service.IUserRoleService;
 import io.guangsoft.media.service.IUserService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.crypto.RandomNumberGenerator;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -68,7 +68,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
 
 	@Override
 	public boolean save(User user) {
-		passwordService.encryptPassword(user);
+		encryptPassword(user);
 		return super.save(user);
 	}
 

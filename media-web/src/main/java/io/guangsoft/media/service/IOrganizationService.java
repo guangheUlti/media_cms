@@ -4,7 +4,7 @@ import io.guangsoft.media.entity.Organization;
 
 import java.util.List;
 
-public interface IOrganizationService extends ITreeCommonService<Organization, String> {
+public interface IOrganizationService extends ICommonService<Organization> {
 	/**
 	 * 通过用户ID查找角色
 	 */
