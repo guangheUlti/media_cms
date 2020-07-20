@@ -1,14 +1,11 @@
 
 package io.guangsoft.media.shiro.filter.user;
 
-import io.guangsoft.media.web.modules.sys.Constants;
 import io.guangsoft.media.entity.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
-import io.guangsoft.web.modules.sys.Constants;
-import io.guangsoft.web.modules.sys.entity.User;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import java.io.IOException;
@@ -66,7 +63,7 @@ public class SysUserFilter extends AccessControlFilter {
 	@Override
 	protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)
 			throws Exception {
-		User user = (User) request.getAttribute(Constants.CURRENT_USER);
+		User user = (User) request.getAttribute("CURRENT_USER");
 		if (user == null) {
 			return true;
 		}
@@ -87,7 +84,7 @@ public class SysUserFilter extends AccessControlFilter {
 	}
 
 	protected void redirectToLogin(ServletRequest request, ServletResponse response) throws IOException {
-		User user = (User) request.getAttribute(Constants.CURRENT_USER);
+		User user = (User) request.getAttribute("CURRENT_USER");
 		String url = null;
 		if (User.STATUS_DELETE.equals(user.getStatus())) {
 			url = getUserNotfoundUrl();

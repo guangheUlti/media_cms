@@ -1,16 +1,11 @@
 
 package io.guangsoft.media.shiro.filter.online;
 
-import io.guangsoft.common.security.shiro.session.SessionDAO;
-import io.guangsoft.media.utils.StringUtils;
 import io.guangsoft.media.entity.User;
-import io.guangsoft.media.shiro.session.mgt.OnlineSession;
-import io.guangsoft.media.web.utils.UserUtils;
-import io.guangsoft.web.modules.sys.entity.User;
-import io.guangsoft.web.security.shiro.ShiroConstants;
-import io.guangsoft.web.security.shiro.session.mgt.OnlineSession;
-
-import io.guangsoft.web.utils.UserUtils;
+import io.guangsoft.media.shiro.session.OnlineSession;
+import io.guangsoft.media.shiro.session.SessionDAO;
+import io.guangsoft.media.shiro.utils.UserUtils;
+import io.guangsoft.media.utils.StringUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
@@ -53,7 +48,7 @@ public class OnlineSessionFilter extends AccessControlFilter {
 		Session session = sessionDAO.readSession(subject.getSession().getId());
 		if (session != null && session instanceof OnlineSession) {
 			OnlineSession onlineSession = (OnlineSession) session;
-			request.setAttribute(ShiroConstants.ONLINE_SESSION, onlineSession);
+			request.setAttribute("ONLINE_SESSION", onlineSession);
 			// 把user id设置进去
 			//boolean isGuest = onlineSession.getUserId() == null  ;
 			if (StringUtils.isEmpty(onlineSession.getUserId())) {

@@ -1,5 +1,17 @@
 package io.guangsoft.media.config;
 
+import io.guangsoft.media.shiro.cache.SpringCacheManagerWrapper;
+import io.guangsoft.media.shiro.credential.RetryLimitHashedCredentialsMatcher;
+import io.guangsoft.media.shiro.filter.ShiroFilterFactoryBean;
+import io.guangsoft.media.shiro.filter.authc.FormAuthenticationFilter;
+import io.guangsoft.media.shiro.filter.jcaptcha.JCaptchaValidateFilter;
+import io.guangsoft.media.shiro.filter.online.OnlineSessionFilter;
+import io.guangsoft.media.shiro.filter.user.SysUserFilter;
+import io.guangsoft.media.shiro.realm.UserRealm;
+import io.guangsoft.media.shiro.session.CacheSessionDAO;
+import io.guangsoft.media.shiro.session.OnlineSessionFactory;
+import io.guangsoft.media.shiro.session.SessionDAO;
+import io.guangsoft.media.shiro.session.SessionManager;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler;

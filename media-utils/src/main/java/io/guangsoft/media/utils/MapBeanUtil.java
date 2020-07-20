@@ -1,7 +1,7 @@
 package io.guangsoft.media.utils;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.springframework.beans.BeanUtils;
 
@@ -476,7 +476,7 @@ public class MapBeanUtil {
 			return obj;
 		if (obj == null)
 			return obj;
-		Iterator it = json.keys();
+		Iterator it = json.keySet().iterator();
 		// 遍历jsonObject数据，添加到Map对象
 		while (it.hasNext()) {
 			String key = String.valueOf(it.next());
@@ -510,7 +510,7 @@ public class MapBeanUtil {
 			return obj;
 		if (obj == null)
 			return obj;
-		Iterator it = json.keys();
+		Iterator it = json.keySet().iterator();
 		// 遍历jsonObject数据，添加到Map对象
 		while (it.hasNext()) {
 			String key = String.valueOf(it.next());

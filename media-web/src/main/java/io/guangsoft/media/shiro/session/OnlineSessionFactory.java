@@ -1,22 +1,19 @@
 /**
  * Copyright (c) 2005-2012 https://github.com/zhangkaitao
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package io.guangsoft.media.shiro.session.mgt;
+package io.guangsoft.media.shiro.session;
 
 import io.guangsoft.media.entity.UserOnline;
-import io.guangsoft.web.modules.sys.entity.UserOnline;
+import io.guangsoft.media.utils.IpUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SessionContext;
 import org.apache.shiro.session.mgt.SessionFactory;
 import org.apache.shiro.web.session.mgt.WebSessionContext;
 
-import io.guangsoft.media.utils.IpUtils;
-
 import javax.servlet.http.HttpServletRequest;
 
-/**
- */
 public class OnlineSessionFactory implements SessionFactory {
 
 	@Override

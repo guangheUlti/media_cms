@@ -1,9 +1,9 @@
 package io.guangsoft.media.shiro.credential;
 
+import io.guangsoft.media.shiro.exception.RepeatAuthenticationException;
+import io.guangsoft.media.shiro.filter.authc.UsernamePasswordToken;
+import io.guangsoft.media.shiro.filter.jcaptcha.JCaptchaValidateFilter;
 import io.guangsoft.media.utils.SpringContextHolder;
-import io.guangsoft.web.security.shiro.exception.RepeatAuthenticationException;
-import io.guangsoft.web.security.shiro.filter.authc.UsernamePasswordToken;
-import io.guangsoft.web.security.shiro.filter.jcaptcha.JCaptchaValidateFilter;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
