@@ -92,7 +92,7 @@ public class UserServiceImpl extends CommonServiceImpl<UserMapper, User> impleme
     @Override
     public void encryptPassword(User user) {
         user.setSalt(randomNumberGenerator.nextBytes().toHex());
-        String password = new SimpleHash("MD5", user.getPassword(), ByteSource.Util.bytes(user.getSalt()), 1).toHex();
+        String password = new SimpleHash("MD5", user.getPassword(), ByteSource.Util.bytes(user.getSalt()), 2).toHex();
         user.setPassword(password);
     }
 }

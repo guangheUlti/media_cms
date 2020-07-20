@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
-@ConfigurationProperties(prefix = "cms.shiro")
+@ConfigurationProperties(prefix = "guangsoft.shiro")
 public class ShiroConfigProperties {
     //最大尝试次数
     private Integer maxRetryCount = 3;
